@@ -10,8 +10,11 @@ Trabalho Interdisciplinar - Aplicacões Web
 ## Participantes
 
 Os membros do grupo são: 
-- Fulano da Silva
-- Ciclano Albuquerque
+- Bruno Vierira Cardoso
+- Isabela Gontijo de Castro
+- Lucas Santos Rosa
+- Mariana Dias Caeatano
+- Paulo Roncarati De Souza
 
 > Inclua a lista dos membros da equipe com seus nomes completos.
 
