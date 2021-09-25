@@ -20,6 +20,8 @@ Margareth tem 45 anos, é professora pós-graduada e trabalha em uma escola púb
 
 ## Requisitos
 
+As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto.
+
 ### Requisitos Funcionais
 
 |ID    | Descrição do Requisito | Prioridade |
@@ -32,16 +34,18 @@ Margareth tem 45 anos, é professora pós-graduada e trabalha em uma escola púb
 
 ### Requisitos não Funcionais
 
-|ID     | Descrição do Requisito  |Prioridade |
-|-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+|ID       | Descrição do Requisito | Prioridade |
+|---------|------------------------|------------|
+| RNF-001 | O usuário deve utilizar a plataforma sem nenhum treinamento | ALTA |
+| RNF-002 | O site deverá te uma interface pensada para que a navegação seja fluida e eficiente | ALTA |
+| RNF-003 | O site deverá ser executado tanto em desktops quanto em dispositivos móveis | BAIXA |
+| RNF-004 | sistema deverá atender às normas legais de direitos autorais | MÉDIA |
 
 ## Restrições
 
 O projeto está restrito pelos itens apresentados na tabela a seguir.
 
-|ID| Restrição                                             |
+|ID| Restrição |
 |--|-------------------------------------------------------|
 |01| O projeto deverá ser entregue até o final do semestre |
 |02| Não pode ser desenvolvido um módulo de backend        |
