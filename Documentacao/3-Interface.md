@@ -23,14 +23,13 @@
 
 
 ## Wireframes
-
-![Exemplo de Wireframe](images/wireframe-example.png)
-
-> São protótipos usados em design de interface para sugerir a
-> estrutura de um site web e seu relacionamentos entre suas
-> páginas. Um wireframe web é uma ilustração semelhante do
-> layout de elementos fundamentais na interface.
+#Home Do Site
+> ![Home do Site](images/images-wireframe/Home.pdf)
+> ![Pesquisa](images/images-wireframe/ResultadoPesquisa.pdf)
+> ![Pagina Cursos](images/images-wireframe/PaginaCurso.pdf)
+> ![Comunidades](images/images-wireframe/Comunidades.pdf)
+> ![Feedback Enviado](images/images-wireframe/FeedbackEnviado.pdf)
+> ![Pagina Feedback](images/images-wireframe/PaginaFeedback.pdf)
+>
 > 
-> **Links Úteis**:
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
+> 
