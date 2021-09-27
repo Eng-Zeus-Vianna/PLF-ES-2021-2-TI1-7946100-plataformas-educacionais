@@ -19,7 +19,7 @@
 > 
 Para organização e distribuição das tarefas do projeto, os integrantes do grupo estam utilizando o **kanban** do **GitHub**: 
 
--Objetivos: a medida que criamos os cartões das tarefas, indicamos nas colunas as devidas funçoes de cada componente do grupo e verificamos se a pessoa está fazendo, se está em teste ainda pu precisa ser revisado.
+-Objetivos: a medida que criamos os cartões das tarefas, indicamos nas colunas as devidas funçoes de cada componente do grupo e verificamos se a pessoa está fazendo, se está em teste ainda ou precisa ser revisado.
 
 
 -To Do: essa coluna se remete a uma Sprint que inda precisamos fazer.
