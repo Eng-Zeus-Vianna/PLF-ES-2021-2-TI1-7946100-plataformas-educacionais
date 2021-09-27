@@ -24,12 +24,27 @@
 
 ## Wireframes
 #Home Do Site
-> ![Home do Site](images/images-wireframe/Home.pdf)
-> ![Pesquisa](images/images-wireframe/ResultadoPesquisa.pdf)
-> ![Pagina Cursos](images/images-wireframe/PaginaCurso.pdf)
-> ![Comunidades](images/images-wireframe/Comunidades.pdf)
-> ![Feedback Enviado](images/images-wireframe/FeedbackEnviado.pdf)
-> ![Pagina Feedback](images/images-wireframe/PaginaFeedback.pdf)
+> ![Home do Site](images/dashboardHome.jpg)
+> 
+#Pagina de Pesquisa
+> ![Pesquisa](images/pesquisaPesquisas.jpg)
+> 
+#Pagina do Curso
+> ![Pagina Cursos](images/cursoPaginaCurso.jpg)
+> 
+#Pagina Comunidade
+> ![Comunidades](images/comunidadeComunidades.jpg)
+> 
+#Pagina Feedback
+> ![Pagina Feedback](images/feedbackPaginaFeedback.jpg)
+> 
+> #Feedback Respondido
+> ![Feedback Respondido](images/feedback_2FeedbackRespondido.jpg)
+> 
+>Feedback Enviado 
+> ![Feedback Enviado](images/feedback_3FeedbackEnviado.jpg)
+
+> 
 >
 > 
 > 
