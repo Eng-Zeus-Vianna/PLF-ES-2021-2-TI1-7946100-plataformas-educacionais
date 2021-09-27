@@ -30,7 +30,7 @@ Para organização e distribuição das tarefas do projeto, os integrantes do gr
 
 -Done: Tarefas que são colocadas aqui, já remete que estão preparadas para serem entregues ao usuário e, nesse caso, essa atividade não pode ser mais alterada pelo os integrantes, pois já foi passada no teste de qualidade antes de vir para cá.
 
-![Kanban GitHub](images/img_kanban_github.png)
+![Kanban GitHub](images/img_kanban_atualizado.jpeg)
 
 ## Ferramentas
 
