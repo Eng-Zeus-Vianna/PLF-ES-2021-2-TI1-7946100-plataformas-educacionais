@@ -8,7 +8,7 @@ O objetivo do trabalho é a disponibilização de uma plataforma online, na qual
 * Bruno Vieira Cardoso
 * Isabela Gontijo de Castro
 * Lucas Santos Rosa
-* Mariana Dias Caeatano
+* Mariana Dias Caetano
 * Paulo Roncarati De Souza
 
 ## Professores responsáveis
