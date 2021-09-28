@@ -1,22 +1,3 @@
-# Projeto da Solução
-
-<span style="color:red">Pré-requisitos: <a href="4-Gestão-Configuração.md"> Ambiente e Ferramentas de Trabalho</a></span>
-
-## Tecnologias Utilizadas
-
-> Descreva aqui qual(is) tecnologias você vai usar para resolver o seu
-> problema, ou seja, implementar a sua solução. Liste todas as
-> tecnologias envolvidas, linguagens a serem utilizadas, serviços web,
-> frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
-> Apresente também uma figura explicando como as tecnologias estão
-> relacionadas ou como uma interação do usuário com o sistema vai ser
-> conduzida, por onde ela passa até retornar uma resposta ao usuário.
-> 
-> Inclua os diagramas de User Flow, esboços criados pelo grupo
-> (stoyboards), além dos protótipos de telas (wireframes). Descreva cada
-> item textualmente comentando e complementando o que está apresentado
-> nas imagens.
-
 ## Arquitetura da solução
 
 > Inclua um diagrama da solução e descreva os módulos e as tecnologias
@@ -35,7 +16,13 @@ sugerir resultados baseados em seu histórico se disponível.
 As opções convergem no acesso às informações sobre o curso, a partir das
 quais o usuário pode fazer a inscrição para o curso ou voltar a procurar.
 
-> WIP
-> update img
+Selecionado um curso, o usuário pode cadastrá-o entre seus cursos em andamento,
+ao que ele passará a constar em seu histórico para recomendações.
+Passa também a ter a possibilidade de tirar dúvidas na comunidade, bem como
+acompanhar desempenho e progresso. Feito o curso, há a possibilidade
+de deixar feedback a seu respeito, que fica no histórico e também retorna
+para recomendações gerais do curso na plataforma, bem como para suas conexões.
+
+
 
 ![Exemplo de UserFlow](images/userFlow.jpg)
