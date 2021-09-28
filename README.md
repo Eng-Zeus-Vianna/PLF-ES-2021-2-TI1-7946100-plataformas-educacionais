@@ -5,7 +5,7 @@ O objetivo do trabalho é a disponibilização de uma plataforma online, na qual
 
 ## Alunos integrantes da equipe
 
-* Bruno Vierira Cardoso
+* Bruno Vieira Cardoso
 * Isabela Gontijo de Castro
 * Lucas Santos Rosa
 * Mariana Dias Caeatano
