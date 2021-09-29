@@ -8,12 +8,16 @@
 ## Divisão de Papéis
 
 >Scrum Master: Paulo Roncarati De Souza
+
 >Product Owner: Isabela Gontijo de Castro
 
 > Equipe de Desenvolvimento:
--Lucas Santos Rosa
--Mariana Dias Caetano
--Bruno Vieira Cardoso
+
+* Lucas Santos Rosa
+ 
+* Mariana Dias Caetano
+
+* Bruno Vieira Cardoso
 
 ## Processo
 
