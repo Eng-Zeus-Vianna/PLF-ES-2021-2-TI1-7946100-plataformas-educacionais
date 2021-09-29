@@ -42,7 +42,8 @@ Para organização e distribuição das tarefas do projeto, os integrantes do gr
 As ferramentas empregadas no projeto são:
 
 - Editor de código: VS Code
-- Ferramentas de comunicação: Microsoft Teams, Google Meet, WhatsApp.
-- Ferramentas de diagramação: Figma 
+- Servidor de repositório: GitHub
+- Ferramentas de comunicação: Microsoft Teams, Google Meet, WhatsApp
+- Ferramentas de diagramação: Figma , Miro
 
 O editor de texto escolhido pela a equipe é de dinâmica funcionalidade e todos já possuem experiência com essa ferramenta. Os meios de comunicação também estão sendoo precisos, pois é de fácil acesso e todos podem entrar nessas plataformas utilizando um email ou número de telefone. Já a ferramenta Figma, foi indicado pelo os professores para ser feito os projetos de interface e, dessa forma, ajudou com a construção de que temos hoje desses projetos do fluxo das telas. 
