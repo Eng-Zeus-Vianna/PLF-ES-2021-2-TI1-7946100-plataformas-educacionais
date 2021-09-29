@@ -8,10 +8,15 @@
 ## Divisão de Papéis
 
 > Equipe de Desenvolvimento
+
 -Bruno Vierira Cardoso
+
 -Isabela Gontijo de Castro
+
 -Lucas Santos Rosa
+
 -Mariana Dias Caeatano
+
 -Paulo Roncarati De Souza
 
 ## Processo
