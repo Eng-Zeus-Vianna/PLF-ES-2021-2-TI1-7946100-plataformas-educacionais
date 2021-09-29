@@ -10,7 +10,7 @@
 >Scrum Master: Paulo Roncarati De Souza
 >Product Owner: Isabela Gontijo de Castro
 
-> Equipe de Desenvolvimento
+> Equipe de Desenvolvimento:
 -Lucas Santos Rosa
 -Mariana Dias Caetano
 -Bruno Vieira Cardoso
