@@ -1,0 +1,49 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOTA 10 - Plataforma educacional</title>
+  <script type="text/javascript" src="inde2xJS.js"></script>
+  <script type="text/javascript" src="sugeridos.js"></script>
+<body>
+<font face="Arial"> 
+<center>
+<h1>NOTA 10 - Plataforma educacional</h1>
+
+  <div class="search-bar">
+    <input type="text" id="seeker">
+  </div>
+  <div id="content"></div>
+  <link rel="stylesheet" type="text/css" href="inde2xCSS.css">
+
+
+
+</center>
+
+    <main>
+        <h3>Cursos sugeridos</h3>
+	<div id="lista-produtos">
+        </div>
+    </main>
+
+</font>
+<script>
+        var prods = '';
+        for (i=0; i < db.dados.length; i++) {
+            prods += `<p class="produto-item">${ db.dados[i].titulo } <br> <img src="${ db.dados[i].imagem }"></p>`;
+        }
+        document.getElementById('lista-produtos').innerHTML = prods;
+</script>
+</body>
+</html>
+
+
+
+
+
+
+  
+
