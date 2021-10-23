@@ -23,7 +23,25 @@ function salvarDados (dados) {
 }
 
 function incluirCurso () {
-    alert ('WIP');
+    let objDados = lerDados();
+
+    let strTitulo = document.getElementById ('campoTitulo').value;
+    let strCategoria = document.getElementById ('campoCategoria').value;
+    let strCodigo = document.getElementById ('campoCodigo').value;
+    let strLink = document.getElementById ('campoLink').value;
+    let strPreco = document.getElementById ('campoPreco').value;
+    let strDescricao = document.getElementById ('campoDescricao').value;
+    let novoCurso = {
+        titulo: strTitulo,
+        categoria: strCategoria,
+        codigo: strCodigo,
+        link: strLink,
+        preco: strPreco,
+        descricao: strDescricao
+    };
+    objDados.cursos.push (novoCurso);
+    salvarDados (objDados);
+    imprimirDados ();
 
 }
  
@@ -43,6 +61,6 @@ function imprimirDados () {
 
 }
 
-// Configura os botões
+//botões
 document.getElementById ('btnCarregaDados').addEventListener ('click', imprimirDados);
 document.getElementById ('btnIncluirCurso').addEventListener ('click', incluirCurso);

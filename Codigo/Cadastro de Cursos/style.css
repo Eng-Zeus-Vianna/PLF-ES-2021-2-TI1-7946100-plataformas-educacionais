@@ -4,4 +4,7 @@ body {
 
 #tela {
     background-color:cornsilk;
+    border: 2px solid black;
+    margin: auto;  
+    padding: 20px;
 }
