@@ -50,7 +50,14 @@ function imprimirDados () {
     let strHtml = '';
     let objDados = lerDados ();
 
-    for (i=0; i< objDados.cursos.length; i++) {
+    if (objDados.cursos.length <= 3) { 
+        i=0
+    }
+    else {
+        i=3
+    }
+
+    for (i; i< objDados.cursos.length; i++) {
         strHtml += `<p>${objDados.cursos[i].titulo} - ${objDados.cursos[i].categoria}
         <br>${objDados.cursos[i].codigo} | ${objDados.cursos[i].link}
         <br>${objDados.cursos[i].preco}
