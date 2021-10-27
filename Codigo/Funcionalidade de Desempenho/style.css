@@ -1,0 +1,22 @@
+h1 {
+  text-align: left;
+}
+
+#progresso { justify-content: left;
+  width: 10%;
+  background-color: lightgray;
+  border-radius: 10px;
+}
+
+#meuDesempenho {
+  justify-content: left;
+  width: 0%;
+  border-radius: 10px;
+  height: 15px;
+  background-color: rgb(161, 41, 125);
+}
+
+.Salvar {
+  
+  text-align: left;
+}

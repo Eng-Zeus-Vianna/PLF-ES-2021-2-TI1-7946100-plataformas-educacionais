@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcionalidade Desempenho</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="progress.js"></script>
+</head>
+
+
+<body>
+    <h1>Curso sobre HTML</h1>
+
+    <form id="aulas">
+        <input id="aulaInt" type="checkbox" value="1" /><label for="aulaInt">Introdução</label> <br>
+        <input id="aulaConc" type="checkbox" value="2" /><label for="aulaConc">Conceitos Básicos</label><br>
+        <input id="aulaElem" type="checkbox" value="3" /><label for="aulaElem">Tipos de Elementos</label><br>
+        <input id="aulaCss" type="checkbox" value="4" /><label for="aulaCss">Básico Css</label><br>
+        <input id="aulaResp" type="checkbox" value="5" /><label for="aulaResp">Responsividade</label><br>
+    </form><br>
+
+    <div id="progresso">
+        <div id="meuDesempenho"></div>
+    </div>
+    <br>
+
+    <div class="Salvar">
+        <input type="button" value="Salvar" onclick="update()" />
+    </div> <br>
+
+
+
+</body>
+
+</html>
