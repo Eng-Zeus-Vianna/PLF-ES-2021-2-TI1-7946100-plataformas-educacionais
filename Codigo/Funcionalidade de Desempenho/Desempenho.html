@@ -15,11 +15,14 @@
     <h1>Curso sobre HTML</h1>
 
     <form id="aulas">
-        <input id="aulaInt" type="checkbox" value="1" /><label for="aulaInt">Introdução</label> <br>
-        <input id="aulaConc" type="checkbox" value="2" /><label for="aulaConc">Conceitos Básicos</label><br>
-        <input id="aulaElem" type="checkbox" value="3" /><label for="aulaElem">Tipos de Elementos</label><br>
-        <input id="aulaCss" type="checkbox" value="4" /><label for="aulaCss">Básico Css</label><br>
-        <input id="aulaResp" type="checkbox" value="5" /><label for="aulaResp">Responsividade</label><br>
+        <label for="aulaInt">
+            <input onclick="update()" id="aulaInt" type="checkbox" value="1" />Introdução</label> <br>
+        <label for="aulaConc"><input onclick="update()" id="aulaConc" type="checkbox" value="2" />Conceitos
+            Básicos</label><br>
+        <label for="aulaElem"><input onclick="update()" id="aulaElem" type="checkbox" value="3" />Tipos de
+            Elementos</label><br>
+        <label for="aulaCss"><input onclick="update()" id="aulaCss" type="checkbox" value="4" />Básico Css</label><br>
+        <label for="aulaResp"><input onclick="update()" id="aulaResp" type="checkbox" value="5" />Responsividade</label><br>
     </form><br>
 
     <div id="progresso">
@@ -27,11 +30,9 @@
     </div>
     <br>
 
-    <div class="Salvar">
-        <input type="button" value="Salvar" onclick="update()" />
-    </div> <br>
 
 
+    <p id="concluidas"> Aulas concluidas /5</p>
 
 </body>
 
