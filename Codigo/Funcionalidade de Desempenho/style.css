@@ -16,7 +16,8 @@ h1 {
   background-color: rgb(161, 41, 125);
 }
 
-.Salvar {
+.salvar {
   
   text-align: left;
-}
+} 
+body{font-family: sans-serif;}

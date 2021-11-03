@@ -1,22 +1,22 @@
+var checked = 0;
 function update() {
-  var checked = 0;
+
   var meuDesempenho = document.getElementById("meuDesempenho");
 
   var aulas = document.getElementById("aulas");
 
+  var result = document.getElementById('concluidas');
 
   boxes = aulas.querySelectorAll("input[type='checkbox']:checked");
   checked = boxes.length
 
-
   meuDesempenho.style.width = ((checked / 5) * 100) + "%";
-  return true;
+
+  result.innerText = 'Aulas concluídas' + checked + '/5';
+
+  if (checked == 5) {
+    alert("Parabéns, curso concluido");
+  }
+
 }
 
-checks = document.querySelectorAll("input[type='checkbox']");
-checks.forEach(function (box) {
-  box.addEventListener("change", function (e) {
-    update()
-  });
-});
-console.log(box);
