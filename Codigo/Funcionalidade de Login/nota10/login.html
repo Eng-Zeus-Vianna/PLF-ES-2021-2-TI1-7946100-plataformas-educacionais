@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-
-<html lang="pt-br">
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nota 10</title>
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
@@ -16,142 +15,190 @@
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="estilos.css">
+    <link href="estilos.css">
 </head>
 
-<body class="justify-content-center">
-    <div id="wrapper" class="animate">
-
-        <nav class="navbar header-top fixed-top navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Nota 10</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-            <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav animate side-nav">
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" title="Cart"> <i class="fas fa-home"></i><span class="ttip">Pagina Inicial</span></a>
-
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Plataforma de Educação Nota10</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home
+                      <span class="sr-only">(current)</span>
+                    </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" title="Comment"> <i class="fas fa-book"></i><span class="ttip">Cursos</span></a>
+                        <a class="nav-link" href="sobre.html">Sobre a Nota10</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" title="Comment"> <i class="fas fa-male"></i><span class="ttip">Comunidade</span></a>
+                        <a class="nav-link" href="#">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" title="Comment"> <i class="fas fa-"></i><span class="ttip">Configurações</span></a>
-                    </li>
-
-
-                </ul>
-                <ul class="navbar-nav ml-md-auto d-md-flex">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fas fa-user"></i> Profile</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fas fa-key"></i> Logout</a>
+                        <a class="nav-link" href="#">Contact</a>
                     </li>
                 </ul>
-
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar">
-                </form>
             </div>
-        </nav>
+        </div>
+    </nav>
 
 
+    <div id="login" class="container login__container my-5">
+        <div class="row login__row">
+            <div class="col-md-6 d-flex">
+                <img class="login__imagek align-self-center" src="https://www.freevector.com/uploads/vector/preview/28488/Businessman_Happy_Accepting_News.jpg" width="100%" alt="" />
+            </div>
+            <div id="login-row" class="col-md-5 d-flex">
+                <div id="login-column" class="align-self-center card login__card shadow-sm w-100">
+                    <div id="login-box" class="card-body">
+                        <form id="login-form" class="form" method="post" onsubmit="loginUser (this)">
+                            <h2 class="text-muted text-center">Página de login - Nota 10</h2>
 
-        <div class="row">
-            <aside class="col-sm-4">
-
-                <div class="cardLogin">
-                    <article class="card-body">
-
-                        <h4 class="card-title mb-4 mt-1">Se não é cadastrado, faça seu cadastro:</h4>
-                        <p>
-                            <a href="" class="btn btn-block btn-outline-info"> <i class="fab fa-google"></i>  Login via G-mail</a>
-                            <a href="" class="btn btn-block btn-outline-primary"> <i class="fab fa-facebook-f"></i>   Login via Facebook</a>
-                        </p>
-                        <!--form-->
-
-
-
-
-                        <div class="form-group">
-                            <label>Seu nome completo</label> nome: <input id="campoNome" class="form-control" placeholder="Nome" type="nome">
-                        </div>
-                        <div class="form-group">
-                            <label>Seu email</label> email: <input id="campoEmail" class="form-control" placeholder="Email" type="email">
-                        </div>
-
-                        <div class="form-group">
-                            <label>Seu telefone</label> telefone <input id="campoTelefone" class="form-control" placeholder="Telefone" type="telefone">
-                        </div>
-                        <div class="form-group">
-                            <label>Instuição de que estuda/estudou</label> instituicao <input id="campoInstituicao" class="form-control" placeholder="Instituição" type="instituicao">
-                        </div>
-                        <!-- form-group// -->
-                        <div class="form-group">
-
-                            <label>Sua senha:</label> senha: <input id="campoSenha" class="form-control" placeholder="******" type="password">
-                        </div>
-                        <!-- form-group// -->
-
-                        <!-- form-group// -->
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-primary btn-block" id="btnIncluirUsuario"> Login  </button>
-                        </div>
-                        <!-- form-group// -->
-                        <!--/form-->
-                    </article>
-
-                </div>
-                <!-- card.// -->
-
-            </aside>
-            <!-- col.// -->
-            <aside class="col-sm-4">
-
-                <div class="cardCadastro">
-
-                    <article class="card-body">
-                        <h4 class="card-title mb-4 mt-1">Se já for cadastrado, faça seu login:</h4>
-                        <p>
-                            <a href="" class="btn btn-block btn-outline-info"> <i class="fab fa-google"></i>   Login via Gmail</a>
-                            <a href="" class="btn btn-block btn-outline-primary"> <i class="fab fa-facebook-f"></i>   Login via facebook</a>
-                        </p>
-                        <hr>
-                        <form>
-                            <div class="form-group">
-                                <input name="" class="form-control" placeholder="Email or login" type="email">
+                            <div class="my-5">
+                                <h5 class="text-center">
+                                    Faça o seu login!
+                                </h5>
                             </div>
-                            <!-- form-group// -->
-                            <div class="form-group">
-                                <input class="form-control" placeholder="******" type="password">
-                            </div>
-                            <!-- form-group// -->
-                            <div class="row">
-                                <div class="col-md-6">
+
+                            <div class="">
+                                <div class="form-group">
+                                    <label for="username" class="text-info">Usuário</label><br>
+                                    <input type="text" name="username" id="username" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="text-info">Senha</label><br>
+                                    <input type="password" name="password" id="password" class="form-control">
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input custom-control" id="customCheckDisabled1" />
+                                    <label class="custom-control-label" for="customCheckDisabled1">Me lembre</label>
+                                </div>
+                                <div class="form-group">
                                     <div class="form-group">
-                                        <button type="submit" class="btn btn-primary btn-block"> Login  </button>
+                                        <button type="submit" class="btn btn-info btn-block"> Login  </button>
                                     </div>
-                                    <!-- form-group// -->
+
+                                    <div class="d-flex justify-content-between">
+                                        <a href="#!">Esqueci a minha senha</a>
+                                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#loginModal">Novo usuario</button>
+                                    </div>
+                                    <div class="dropdown-divider my-4"></div>
+                                    <div class="text-center w-100">
+                                        <small>Built by <a>Nota 10</a> </small>
+                                        </dvi>
+                                    </div>
                                 </div>
-                                <div class="col-md-6 text-right">
-                                    <a class="small" href="#">Forgot password?</a>
-                                </div>
-                            </div>
-                            <!-- .row// -->
                         </form>
-                    </article>
-            </aside>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            </aside>
+            <!-- Modal -->
+            <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="loginModalLabel">Cadastre a sua conta!</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+                        </div>
+                        <div class="modal-body">
+                            <div id="login-box" class="col-md-12">
+                                <form id="login-formC" class="form" method="post" onsubmit="loginUser (this)">
+                                    <h3 class="text-center text-info">Novo usuário</h3>
+                                    <div class="form-group">
+                                        <label for="login" class="text-info">Usuário</label><br>
+                                        <input type="text" name="txt_login" id="txt_login" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="nome" class="text-info">Nome completo</label><br>
+                                        <input type="text" name="txt_nome" id="txt_nome" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email" class="text-info">email</label><br>
+                                        <input type="text" name="txt_email" id="txt_email" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="senha" class="text-info">Senha</label><br>
+                                        <input type="password" name="txt_senha" id="txt_senha" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="senha2" class="text-info">Confirmação de Senha</label><br>
+                                        <input type="password" name="txt_senha2" id="txt_senha2" class="form-control">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                            <button type="button" id="btn_salvar" class="btn btn-info">Salvar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-            <script src="login.js"></script>
+        <script src="login.js"></script>
+        <script>
+            // Declara uma função para processar o formulário de login
+            function processaFormLogin(event) {
+                // Cancela a submissão do formulário para tratar sem fazer refresh da tela
+                event.preventDefault();
+
+                // Obtem os dados de login e senha a partir do formulário de login
+                var username = document.getElementById('username').value;
+                var password = document.getElementById('password').value;
+
+                // Valida login e se estiver ok, redireciona para tela inicial da aplicação
+                resultadoLogin = loginUser(username, password);
+                if (resultadoLogin) {
+                    window.location.href = 'index.html';
+                } else { // Se login falhou, avisa ao usuário
+                    alert('Usuário ou senha incorretos');
+                }
+            }
+
+            function salvaLogin(event) {
+                // Cancela a submissão do formulário para tratar sem fazer refresh da tela
+                event.preventDefault();
+
+                // Obtem os dados do formulário
+                let login = document.getElementById('txt_login').value;
+                let nome = document.getElementById('txt_nome').value;
+                let email = document.getElementById('txt_email').value;
+                let senha = document.getElementById('txt_senha').value;
+                let senha2 = document.getElementById('txt_senha2').value;
+                if (senha != senha2) {
+                    alert('As senhas informadas não conferem.');
+                    return
+                }
+
+                // Adiciona o usuário no banco de dados
+                addUser(nome, login, senha, email);
+                alert('Usuário salvo com sucesso. Proceda com o login para ');
+
+                // Oculta a div modal do login
+                //document.getElementById ('loginModal').style.display = 'none';
+                $('#loginModal').modal('hide');
+            }
+
+            // Associa a funçao processaFormLogin  formulário adicionado um manipulador do evento submit
+            document.getElementById('login-form').addEventListener('submit', processaFormLogin);
+
+
+            // Associar salvamento ao botao
+            document.getElementById('btn_salvar').addEventListener('click', salvaLogin);
+        </script>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 
 </html>
