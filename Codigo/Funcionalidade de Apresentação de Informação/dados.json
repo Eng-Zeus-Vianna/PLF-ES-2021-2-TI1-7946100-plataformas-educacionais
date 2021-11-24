@@ -1,0 +1,38 @@
+{
+	"nome_usuario": "João",
+	"cursos_cadastrados": [
+		{
+			"nome_curso": "Curso A",
+			"aulas": [
+				"Aula a1",
+				"Aula a2",
+				"Aula a3",
+				"Aula a4"
+			]
+		},
+		{
+			"nome_curso": "Curso B",
+			"aulas": [
+				"Aula b1",
+				"Aula b2",
+				"Aula b3",
+				"Aula b4",
+				"Aula b5",
+				"Aula b6"
+			]
+		},
+		{
+			"nome_curso": "Curso C",
+			"aulas": [
+				"Aula c1",
+				"Aula c2",
+				"Aula c3",
+				"Aula c4",
+				"Aula c5",
+				"Aula c6",
+				"Aula c7",
+				"Aula c8"
+			]
+		}
+	]
+}
