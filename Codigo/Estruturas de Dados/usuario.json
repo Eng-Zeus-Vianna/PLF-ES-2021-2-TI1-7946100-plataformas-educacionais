@@ -1,0 +1,9 @@
+[
+	{
+		"nome": "João Silva",
+		"email": "joao@gmail.com",
+		"senha": "1234",
+		"cursos": [],
+		"admin": false
+	}
+]
