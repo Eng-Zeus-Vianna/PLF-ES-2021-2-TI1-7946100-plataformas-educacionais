@@ -1,48 +1,204 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
-	<title>iCOurses | Adicionar curso</title>
-
 	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<script src="js/add_curso.js"></script>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Cadastro de Cursos</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css\add_curso.css">
 </head>
 
-<body>
-	<h1>CRUD Cursos</h1>
+<body onload="init()">
+	<h1>Cadastro de Cursos (CRUD)</h1>
 
-	<!-- CRUD Cursos -->
-	<form action="">
-		<div>
-			<label for="nome_curso">Nome do curso</label><br>
-			<input type="text" placeholder="Digite o nome do curso" id="nome_curso">
+	<div class="container">
+		<div class="row">
+			<div id="msg" class="col-sm-10 offset-sm-1 ">
+				<!--<div class="alert alert-warning">Curso não encontrado.</div>-->
+			</div>
 		</div>
 
-		<div>
-			<label for="descricao">Descrição</label><br>
-			<input type="text" placeholder="Digite a descrição do curso" id="descricao">
+		<form id="form-curso">
+			<div class="form-group row">
+				<div class="col-sm-4">
+					<label for="inputId">Id</label>
+					<input type="text" class="form-control" id="inputId" placeholder="ID" disabled>
+				</div>
+				<div class="col-sm-8">
+					<label for="inputNome">Nome do Curso (*)</label>
+					<input type="text" class="form-control" id="inputNome" required
+						placeholder="Informe o nome do curso">
+				</div>
+			</div>
+			<div class="form-group row">
+				<div class="col-sm-6">
+					<label for="inputAutor">Autor</label>
+					<input type="text" class="form-control" id="inputAutor" placeholder="Informe o Autor do curso">
+				</div>
+			</div>
+			<div class="form-group row">
+				<div class="col-sm-12">
+					<label for="inputDescricao">Descrição (*)</label>
+					<input type="text" class="form-control" id="inputDescricao" required placeholder="Descricao">
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<div class="col-sm-4">
+					<small>(*) Campos obrigatórios</small>
+				</div>
+			</div>
+			<div class="form-group row">
+				<div class="col-sm-12">
+					<input type="button" class="btn btn-success" id="btnInsert" value="Inserir">
+					<input type="button" class="btn btn-warning" id="btnUpdate" value="Alterar">
+					<input type="button" class="btn btn-danger" id="btnDelete" value="Excluir">
+					<input type="button" class="btn btn-secondary" id="btnClear" value="Limpar Form">
+				</div>
+			</div>
+		</form>
+
+		<div class="row">
+			<div class="col-sm-12">
+				<table id="grid-cursos" class="table table-striped">
+					<thead>
+						<tr>
+							<th scope="col">#</th>
+							<th scope="col">Nome do Curso</th>
+							<th scope="col">Descrição</th>
+							<th scope="col">Autor</th>z
+						</tr>
+					</thead>
+					<tbody id="table-cursos">
+						<tr>
+							<td scope="row">1</td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
 		</div>
+	</div>
 
-		<div>
-			<label for="avaliacao">Avaliação</label><br>
-			<input type="number" placeholder="Digite a avaliação do curso" id="avaliacao">
-		</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="js\add_curso.js"></script>
+	<script>
+		function exibeCursos() {
+			// Remove todas as linhas do corpo da tabela
+			$("#table-cursos").html("");
 
-		<div>
-			<label for="autor">Autor</label><br>
-			<input type="text" placeholder="Digite o autor do curso" id="autor">
-		</div>
+			// Popula a tabela com os registros do banco de dados
+			for (i = 0; i < db.data.length; i++) {
+				let curso = db.data[i];
+				$("#table-cursos").append(`<tr><td scope="row">${curso.id}</td>
+                                                <td>${curso.nome_curso}</td>
+                                                <td>${curso.descricao}</td>
+                                                <td>${curso.autor}</td>
+                                            </tr>`);
+			}
+		}
 
-		<hr>
+		function init() {
+			// Adiciona funções para tratar os eventos 
+			$("#btnInsert").click(function () {
+				// Verfica se o formulário está preenchido corretamente
+				if (!$('#form-curso')[0].checkValidity()) {
+					displayMessage("Preencha o formulário corretamente.");
+					return;
+				}
 
-		<input type="button" value="Adicionar">
-		<input type="button" value="Alterar">
-		<input type="button" value="Excluir">
-		<input type="button" value="Mostrar">
-	</form>
+				// Obtem os valores dos campos do formulário
+				let campoNome = $("#inputNome").val();
+				let campoDescricao = $("#inputDescricao").val();
+				let campoAutor = $("#inputAutor").val();
+				let curso = {
+					nome_curso: campoNome,
+					descricao: campoDescricao,
+					autor: campoAutor,
+				};
+
+				insertCurso(curso);
+
+				// Reexibe os cursos
+				exibeCursos();
+
+				// Limpa o formulario
+				$("#form-curso")[0].reset();
+			});
+
+			// Intercepta o click do botão Alterar
+			$("#btnUpdate").click(function () {
+				// Obtem os valores dos campos do formulário
+				let campoId = $("#inputId").val();
+				if (campoId == "") {
+					displayMessage("Selecione um curso para ser alterado.");
+					return;
+				}
+				let campoNome = $("#inputNome").val();
+				let campoDescricao = $("#inputDescricao").val();
+				let campoAutor = $("#inputAutor").val();
+				let curso = {
+					nome_curso: campoNome,
+					descricao: campoDescricao,
+					autor: campoAutor,
+				};
+
+				updateCurso(parseInt(campoId), curso);
+
+				// Reexibe os cursos
+				exibeCursos();
+
+				// Limpa o formulario
+				$("#form-curso")[0].reset();
+			});
+
+			// Intercepta o click do botão Excluir
+			$("#btnDelete").click(function () {
+				let campoId = $("#inputId").val();
+				if (campoId == "") {
+					displayMessage("Selecione um curso a ser excluído.");
+					return;
+				}
+				deleteCurso(parseInt(campoId));
+
+				// Reexibe os cursos
+				exibeCursos();
+
+				// Limpa o formulario
+				$("#form-curso")[0].reset();
+			});
+
+			// Intercepta o click do botão Listar Cursos
+			$("#btnClear").click(function () {
+				$("#form-curso")[0].reset();
+			});
+
+			// Oculta a mensagem de aviso após alguns segundos
+			$('#msg').bind("DOMSubtreeModified", function () {
+				window.setTimeout(function () {
+					$(".alert").fadeTo(500, 0).slideUp(500, function () {
+						$(this).remove();
+					});
+				}, 5000);
+			});
+
+			// Preenche o formulário quando o usuario clicar em uma linha da tabela 
+			$("#grid-cursos").on("click", "tr", function (e) {
+				let linhaCurso = this;
+				colunas = linhaCurso.querySelectorAll("td");
+
+				$("#inputId").val(colunas[0].innerText);
+				$("#inputNome").val(colunas[1].innerText);
+				$("#inputDescricao").val(colunas[2].innerText);
+				$("#inputAutor").val(colunas[4].innerText);
+			});
+
+			exibeCursos();
+		}
+	</script>
 </body>
 
 </html>
