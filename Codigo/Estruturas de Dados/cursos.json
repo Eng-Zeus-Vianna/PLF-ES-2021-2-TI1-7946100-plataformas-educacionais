@@ -2,7 +2,11 @@
 	{
 		"nome_curso": "Curso A",
 		"descricao": "Melhor curso de...",
-		"avaliacao": 4,
-		"autor": "Maria Silva"
+		"autor": "Maria Silva",
+		"aulas": [
+			"Aula A1",
+			"Aula A2",
+			"Aula A3"
+		]
 	}
 ]
