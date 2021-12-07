@@ -3,24 +3,6 @@
 		"nome_curso": "Curso A",
 		"descricao": "Melhor curso de...",
 		"avaliacao": 4,
-		"autor": "Maria Silva",
-		"aulas": [
-			{
-				"nome_aula": "Aula A-1",
-				"concluida": false
-			},
-			{
-				"nome_aula": "Aula A-2",
-				"concluida": false
-			},
-			{
-				"nome_aula": "Aula A-3",
-				"concluida": false
-			},
-			{
-				"nome_aula": "Aula A-4",
-				"concluida": false
-			}
-		]
+		"autor": "Maria Silva"
 	}
 ]
