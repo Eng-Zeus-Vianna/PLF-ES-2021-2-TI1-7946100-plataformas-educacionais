@@ -1,0 +1,191 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Cadastro de Aulas</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css\add_curso.css">
+</head>
+
+<body onload="init()">
+	<h1>Cadastro de Aulas (CRUD)</h1>
+
+	<div class="container">
+		<div class="row">
+			<div id="msg" class="col-sm-10 offset-sm-1 ">
+				<!--<div class="alert alert-warning">Curso não encontrado.</div>-->
+			</div>
+		</div>
+
+		<form id="form-aula">
+			<div class="form-group row">
+				<div class="col-sm-4">
+					<label for="inputId">Id</label>
+					<input type="text" class="form-control" id="inputId" placeholder="ID" disabled>
+				</div>
+				<div class="col-sm-8">
+					<label for="inputNome_aula">Nome da aula (*)</label>
+					<input type="text" class="form-control" id="inputNome_aula" required
+						placeholder="Informe o nome da aula">
+				</div>
+			</div>
+			<div class="form-group row">
+				<div class="col-sm-12">
+					<label for="inputConteudo">Conteudo (*)</label>
+					<input type="text" class="form-control" id="inputConteudo" required placeholder="Conteúdo">
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<div class="col-sm-4">
+					<small>(*) Campos obrigatórios</small>
+				</div>
+			</div>
+			<div class="form-group row">
+				<div class="col-sm-12">
+					<input type="button" class="btn btn-success" id="btnInsert" value="Inserir">
+					<input type="button" class="btn btn-warning" id="btnUpdate" value="Alterar">
+					<input type="button" class="btn btn-danger" id="btnDelete" value="Excluir">
+					<input type="button" class="btn btn-secondary" id="btnClear" value="Limpar Form">
+				</div>
+			</div>
+		</form>
+
+		<div class="row">
+			<div class="col-sm-12">
+				<table id="grid-aulas" class="table table-striped">
+					<thead>
+						<tr>
+							<th scope="col">#</th>
+							<th scope="col">Nome do aula</th>
+							<th scope="col">Conteudo</th>
+						</tr>
+					</thead>
+					<tbody id="table-aulas">
+						<tr>
+							<td scope="row">1</td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="js\add_aulas.js"></script>
+	<script>
+		function exibeaulas() {
+			// Remove todas as linhas do corpo da tabela
+			$("#table-aulas").html("");
+
+			// Popula a tabela com os registros do banco de dados
+			for (i = 0; i < db.data.length; i++) {
+				let aula = db.data[i];
+				$("#table-aulas").append(`<tr><td scope="row">${aula.id}</td>
+                                                <td>${aula.nome_aula}</td>
+                                                <td>${aula.conteudo}</td>
+                                            </tr>`);
+			}
+		}
+
+		function init() {
+			// Adiciona funções para tratar os eventos 
+			$("#btnInsert").click(function () {
+				// Verfica se o formulário está preenchido corretamente
+				if (!$('#form-aula')[0].checkValidity()) {
+					displayMessage("Preencha o formulário corretamente.");
+					return;
+				}
+
+				// Obtem os valores dos campos do formulário
+				let campoNome_aula = $("#inputNome_aula").val();
+				let campoConteudo = $("#inputConteudo").val();
+				let aula = {
+					nome_aula: campoNome_aula,
+					conteudo: campoConteudo,
+				};
+
+				insertaula(aula);
+
+				// Reexibe os aulas
+				exibeaulas();
+
+				// Limpa o formulario
+				$("#form-aula")[0].reset();
+			});
+
+			// Intercepta o click do botão Alterar
+			$("#btnUpdate").click(function () {
+				// Obtem os valores dos campos do formulário
+				let campoId = $("#inputId").val();
+				if (campoId == "") {
+					displayMessage("Selecione um aula para ser alterado.");
+					return;
+				}
+				let campoNome_aula = $("#inputNome_aula").val();
+				let campoConteudo = $("#inputConteudo").val();
+				let aula = {
+					nome_aula: campoNome_aula,
+					conteudo: campoConteudo,
+				};
+
+				updateaula(parseInt(campoId), aula);
+
+				// Reexibe os aulas
+				exibeaulas();
+
+				// Limpa o formulario
+				$("#form-aula")[0].reset();
+			});
+
+			// Intercepta o click do botão Excluir
+			$("#btnDelete").click(function () {
+				let campoId = $("#inputId").val();
+				if (campoId == "") {
+					displayMessage("Selecione um aula a ser excluído.");
+					return;
+				}
+				deleteaula(parseInt(campoId));
+
+				// Reexibe os aulas
+				exibeaulas();
+
+				// Limpa o formulario
+				$("#form-aula")[0].reset();
+			});
+
+			// Intercepta o click do botão Listar aulas
+			$("#btnClear").click(function () {
+				$("#form-aula")[0].reset();
+			});
+
+			// Oculta a mensagem de aviso após alguns segundos
+			$('#msg').bind("DOMSubtreeModified", function () {
+				window.setTimeout(function () {
+					$(".alert").fadeTo(500, 0).slideUp(500, function () {
+						$(this).remove();
+					});
+				}, 5000);
+			});
+
+			// Preenche o formulário quando o usuario clicar em uma linha da tabela 
+			$("#grid-aulas").on("click", "tr", function (e) {
+				let linhaaula = this;
+				colunas = linhaaula.querySelectorAll("td");
+
+				$("#inputId").val(colunas[0].innerText);
+				$("#inputNome_aula").val(colunas[1].innerText);
+				$("#inputConteudo").val(colunas[2].innerText);
+			});
+
+			exibeaulas();
+		}
+	</script>
+</body>
+
+</html>
