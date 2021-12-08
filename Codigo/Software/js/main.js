@@ -1,0 +1,1 @@
+// Declaração de variáveis
