@@ -27,8 +27,7 @@
 				</div>
 				<div class="col-sm-8">
 					<label for="inputNome">Nome do Curso (*)</label>
-					<input type="text" class="form-control" id="inputNome" required
-						placeholder="Informe o nome do curso">
+					<input type="text" class="form-control" id="inputNome" required placeholder="Informe o nome do curso">
 				</div>
 			</div>
 			<div class="form-group row">
@@ -67,7 +66,7 @@
 							<th scope="col">#</th>
 							<th scope="col">Nome do Curso</th>
 							<th scope="col">Descrição</th>
-							<th scope="col">Autor</th>z
+							<th scope="col">Autor</th>
 						</tr>
 					</thead>
 					<tbody id="table-cursos">
@@ -102,7 +101,7 @@
 		}
 
 		function init() {
-			// Adiciona funções para tratar os eventos 
+			// Adiciona funções para tratar os eventos
 			$("#btnInsert").click(function () {
 				// Verfica se o formulário está preenchido corretamente
 				if (!$('#form-curso')[0].checkValidity()) {
@@ -185,7 +184,7 @@
 				}, 5000);
 			});
 
-			// Preenche o formulário quando o usuario clicar em uma linha da tabela 
+			// Preenche o formulário quando o usuario clicar em uma linha da tabela
 			$("#grid-cursos").on("click", "tr", function (e) {
 				let linhaCurso = this;
 				colunas = linhaCurso.querySelectorAll("td");
