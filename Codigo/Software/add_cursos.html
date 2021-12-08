@@ -1,108 +1,124 @@
+<!doctype html>
 <html lang="pt-br">
 
 <head>
-	<title>Cadastro de Cursos</title>
+	<title>iCourses | Add Cursos</title>
 
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/add_curso.css">
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+	<!-- Bootstrap Icon -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
+	<script src="js/db_fake.js"></script>
+	<script src="js/main.js"></script>
 </head>
 
-<body onload="init()">
-	<h1>Cadastro de Cursos (CRUD)</h1>
+<body>
 
-	<div class="container">
-		<div class="row">
-			<div id="msg" class="col-sm-10 offset-sm-1 ">
-				<!--<div class="alert alert-warning">Curso não encontrado.</div>-->
+	<!-- Navbar -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+		<div class="container">
+
+			<!-- Logo -->
+			<a class="navbar-brand" href="index.html"><i class="bi bi-laptop"></i> iCourses</a>
+
+			<!-- Hamburger Menu -->
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<!-- Opções do Menu -->
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link" href="index.html">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="add_cursos.html">Adicionar Cursos</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="add_aulas.html">Adicionar Aulas</a>
+					</li>
+				</ul>
 			</div>
+
+		</div>
+	</nav>
+
+	<!-- Conteúdo - Cadastro -->
+	<div class="container">
+		<h2>Adicionar Cursos</h2>
+
+		<!-- Mensagens -->
+		<div class="row">
+			<div id="msg" class="col-sm-10 offset-sm-1"></div>
 		</div>
 
+		<!-- Campos de Input -->
 		<form id="form-curso">
 			<div class="form-group row">
-				<div class="col-sm-4">
+
+				<div class="col d-none">
 					<label for="inputId">Id</label>
 					<input type="text" class="form-control" id="inputId" placeholder="ID" disabled>
 				</div>
-				<div class="col-sm-8">
-					<label for="inputNome">Nome do Curso (*)</label>
-					<input type="text" class="form-control" id="inputNome" required placeholder="Informe o nome do curso">
+				<div class="col-md-6 mt-3">
+					<label for="inputNome">Nome do Curso</label>
+					<input type="text" class="form-control" id="inputNome" placeholder="Informe o nome do curso">
 				</div>
-			</div>
-			<div class="form-group row">
-				<div class="col-sm-6">
+				<div class="col-md-6 mt-3">
 					<label for="inputAutor">Autor</label>
 					<input type="text" class="form-control" id="inputAutor" placeholder="Informe o Autor do curso">
 				</div>
-			</div>
-			<div class="form-group row">
-				<div class="col-sm-12">
-					<label for="inputDescricao">Descrição (*)</label>
-					<input type="text" class="form-control" id="inputDescricao" required placeholder="Descricao">
+				<div class="col mt-3">
+					<label for="inputDescricao">Descrição</label>
+					<textarea id="inputDescricao" class="form-control" placeholder="Descrição do curso"></textarea>
 				</div>
+
 			</div>
 
-			<div class="form-group row">
-				<div class="col-sm-4">
-					<small>(*) Campos obrigatórios</small>
-				</div>
-			</div>
-			<div class="form-group row">
+			<!-- Botões -->
+			<div class="form-group row mt-4">
 				<div class="col-sm-12">
 					<input type="button" class="btn btn-success" id="btnInsert" value="Inserir">
-					<input type="button" class="btn btn-warning" id="btnUpdate" value="Alterar">
-					<input type="button" class="btn btn-danger" id="btnDelete" value="Excluir">
-					<input type="button" class="btn btn-secondary" id="btnClear" value="Limpar Form">
+					<input type="button" class="btn btn-outline-warning" id="btnUpdate" value="Alterar">
+					<input type="button" class="btn btn-outline-danger" id="btnDelete" value="Excluir">
+					<input type="button" class="btn btn-outline-secondary" id="btnClear" value="Limpar Dados">
 				</div>
 			</div>
 		</form>
+		<hr>
 
+		<!-- Tabela -->
 		<div class="row">
-			<div class="col-sm-12">
-				<table id="grid-cursos" class="table table-striped">
+			<div class="col">
+				<table id="grid-cursos" class="table table-hover">
 					<thead>
 						<tr>
-							<th scope="col">#</th>
-							<th scope="col">Nome do Curso</th>
+							<th scope="col">ID</th>
+							<th scope="col">Curso</th>
 							<th scope="col">Descrição</th>
 							<th scope="col">Autor</th>
 						</tr>
 					</thead>
-					<tbody id="table-cursos">
-						<tr>
-							<td scope="row">1</td>
-							<td></td>
-							<td></td>
-							<td></td>
-						</tr>
-					</tbody>
+					<tbody id="table-cursos"></tbody>
 				</table>
 			</div>
 		</div>
+
 	</div>
 
+	<!-- Scripts -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script src="js/add_curso.js"></script>
+
 	<script>
-		function exibeCursos() {
-			// Remove todas as linhas do corpo da tabela
-			$("#table-cursos").html("");
 
-			// Popula a tabela com os registros do banco de dados
-			for (i = 0; i < db.data.length; i++) {
-				let curso = db.data[i];
-				$("#table-cursos").append(`<tr><td scope="row">${curso.id}</td>
-                                                <td>${curso.nome_curso}</td>
-                                                <td>${curso.descricao}</td>
-                                                <td>${curso.autor}</td>
-                                            </tr>`);
-			}
-		}
-
-		function init() {
+		onload = function () {
 			// Adiciona funções para tratar os eventos
 			$("#btnInsert").click(function () {
 				// Verfica se o formulário está preenchido corretamente
@@ -194,12 +210,34 @@
 				$("#inputId").val(colunas[0].innerText);
 				$("#inputNome").val(colunas[1].innerText);
 				$("#inputDescricao").val(colunas[2].innerText);
-				$("#inputAutor").val(colunas[4].innerText);
+				$("#inputAutor").val(colunas[3].innerText);
 			});
 
 			exibeCursos();
 		}
+
+		function exibeCursos() {
+			// Remove todas as linhas do corpo da tabela
+			$("#table-cursos").html("");
+
+			// Popula a tabela com os registros do banco de dados
+			for (i = 0; i < db.data.length; i++) {
+				let curso = db.data[i];
+				$("#table-cursos").append(`
+					<tr>
+						<td scope="row">${curso.id}</td>
+						<td>${curso.nome_curso}</td>
+						<td>${curso.descricao}</td>
+						<td>${curso.autor}</td>
+					</tr>
+				`);
+			}
+		}
 	</script>
+
+
+	<!-- Bootstrap Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 
 </html>
