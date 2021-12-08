@@ -49,49 +49,60 @@
 		</div>
 	</nav>
 
-	<!-- Conteúdo -->
+	<!-- Conteúdo - Curso -->
 	<div class="container">
 
-		<!-- Titulo -->
-		<h2 id="titulo_conteudo">Meus Cursos</h2>
+		<!-- Descrição do curso -->
+		<div id="tela_descricao_curso"></div>
 
-		<!-- Grid de Cards - Cursos -->
-		<div class="row row-cols-1 row-cols-md-2 g-4" id="tela_cursos"></div>
+		<!-- Aulas do curso -->
+		<div>
+			<h4>Aulas</h4>
+
+			<!-- Lista de aulas -->
+			<div class="list-group" id="tela_aulas"></div>
+
+		</div>
+
 	</div>
 
 
 
 	<script>
 
-
 		// Insere conteúdo HTML a partir do BD
 		onload = function () {
 
-			let telaCursos = document.getElementById("tela_cursos")
-			let strHTML = ""
-			telaCursos.innerHTML = ""
+			var objCurso = db.cursos[0] // APENAS PARA TESTE
 
-			// Preenhce HTML da div#tela_cursos
-			db.cursos.forEach(curso => {
+			let telaDescrCurso = document.getElementById("tela_descricao_curso")
+			let telaAulas = document.getElementById("tela_aulas")
 
-				strHTML = `
-				<div class="col">
-					<a href="curso.html" class="link-dark text-decoration-none">
-						<div class="card h-100">
-							<div class="card-body">
-								<h5 class="card-title">${curso.nome_curso}</h5>
-								<p class="card-text"><i class="bi bi-bookmark"></i> ${curso.descricao}</p>
-							</div>
-							<div class="card-footer text-muted">
-								<i class="bi bi-person"></i> ${curso.autor} · ${curso.aulas.length} Aulas
-							</div>
-						</div>
-					</a>
-				`
-				telaCursos.innerHTML += strHTML
-			});
+			let strHTML = `
+			<h2>${objCurso.nome_curso}</h2>
+			<p>${objCurso.descricao}</p>
+			<p><i class="bi bi-person"></i> ${objCurso.autor}</p>
+			<hr>
+			`
+			telaDescrCurso.innerHTML = strHTML
+
+			if (objCurso.aulas.length == 0) {
+				strHTML = `<p><i class="bi bi-exclamation-circle-fill"></i> Você ainda não adicionou aulas para esse curso</p>`
+				telaDescrCurso = strHTML
+			}
+			else {
+				objCurso.aulas.forEach((aula, index) => {
+					console.log(aula, index)
+					strHTML = `
+					<button type="button" class="list-group-item list-group-item-action"><input type="checkbox">&ensp;${index + 1}. ${aula}</button>
+					`
+					telaAulas.innerHTML += strHTML
+				})
+			}
 		}
+
 	</script>
+
 
 	<!-- Bootstrap Bundle with Popper -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

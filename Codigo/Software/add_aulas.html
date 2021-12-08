@@ -1,12 +1,14 @@
-<html lang="en">
+<html lang="pt-br">
 
 <head>
+	<title>Cadastro de Aulas</title>
+
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Cadastro de Aulas</title>
+
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="css\add_curso.css">
+	<link rel="stylesheet" href="css/add_curso.css">
 </head>
 
 <body onload="init()">
@@ -27,8 +29,7 @@
 				</div>
 				<div class="col-sm-8">
 					<label for="inputNome_aula">Nome da aula (*)</label>
-					<input type="text" class="form-control" id="inputNome_aula" required
-						placeholder="Informe o nome da aula">
+					<input type="text" class="form-control" id="inputNome_aula" required placeholder="Informe o nome da aula">
 				</div>
 			</div>
 			<div class="form-group row">
@@ -77,10 +78,11 @@
 	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-	<script src="js\add_aulas.js"></script>
+	<script src="js/add_aulas.js"></script>
 	<script>
 		function exibeaulas() {
 			// Remove todas as linhas do corpo da tabela
+
 			$("#table-aulas").html("");
 
 			// Popula a tabela com os registros do banco de dados
@@ -94,7 +96,7 @@
 		}
 
 		function init() {
-			// Adiciona funções para tratar os eventos 
+			// Adiciona funções para tratar os eventos
 			$("#btnInsert").click(function () {
 				// Verfica se o formulário está preenchido corretamente
 				if (!$('#form-aula')[0].checkValidity()) {
@@ -173,7 +175,7 @@
 				}, 5000);
 			});
 
-			// Preenche o formulário quando o usuario clicar em uma linha da tabela 
+			// Preenche o formulário quando o usuario clicar em uma linha da tabela
 			$("#grid-aulas").on("click", "tr", function (e) {
 				let linhaaula = this;
 				colunas = linhaaula.querySelectorAll("td");
