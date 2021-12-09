@@ -56,16 +56,7 @@
 		<!-- Aulas -->
 		<div>
 			<h4>Aulas</h4>
-			<div class="list-group" id="tela_aulas">
-
-				<!-- <div class="input-group mb-1">
-					<div class="input-group-text">
-						<input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
-					</div>
-					<a href="" class="form-control"></a>
-				</div> -->
-
-			</div>
+			<div class="list-group" id="tela_aulas"></div>
 		</div>
 
 	</div>
@@ -104,12 +95,9 @@
 						<div class="input-group-text">
 							<input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
 						</div>
-						<a href="${aula.link}" class="form-control link-dark text-decoration-none">${index + 1}. ${aula.nome_aula}</a>
+						<a href="${aula.link}" class="form-control link-dark text-decoration-none" target="_blank">${index + 1}. ${aula.nome_aula}</a>
 					</div>
-
-
 					`
-					// <button type="button" class="list-group-item list-group-item-action"><input type="checkbox">&ensp;${index + 1}. ${aula.nome_aula}</button>
 					telaAulas.innerHTML += strHTML
 				})
 			}
