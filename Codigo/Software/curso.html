@@ -12,9 +12,6 @@
 
 	<!-- Bootstrap Icon -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-
-	<script src="js/db_fake.js"></script>
-	<script src="js/main.js"></script>
 </head>
 
 <body>
@@ -64,38 +61,36 @@
 	</div>
 
 
-
+	<script src="js/add_curso.js"></script>
 	<script>
 
-		// Insere conteúdo HTML a partir do BD
 		onload = function () {
 
-			var objCurso = db.cursos[0] // APENAS PARA TESTE
+			console.log(db)
+			// 	let telaDescrCurso = document.getElementById("tela_descricao_curso")
+			// 	let telaAulas = document.getElementById("tela_aulas")
 
-			let telaDescrCurso = document.getElementById("tela_descricao_curso")
-			let telaAulas = document.getElementById("tela_aulas")
+			// 	let strHTML = `
+			// 	<h2>${db.data.nome_curso}</h2>
+			// 	<p>${db.data.descricao}</p>
+			// 	<p><i class="bi bi-person"></i> ${db.data.autor}</p>
+			// 	<hr>
+			// 	`
+			// 	telaDescrCurso.innerHTML = strHTML
 
-			let strHTML = `
-			<h2>${objCurso.nome_curso}</h2>
-			<p>${objCurso.descricao}</p>
-			<p><i class="bi bi-person"></i> ${objCurso.autor}</p>
-			<hr>
-			`
-			telaDescrCurso.innerHTML = strHTML
-
-			if (objCurso.aulas.length == 0) {
-				strHTML = `<p><i class="bi bi-exclamation-circle-fill"></i> Você ainda não adicionou aulas para esse curso</p>`
-				telaDescrCurso = strHTML
-			}
-			else {
-				objCurso.aulas.forEach((aula, index) => {
-					console.log(aula, index)
-					strHTML = `
-					<button type="button" class="list-group-item list-group-item-action"><input type="checkbox">&ensp;${index + 1}. ${aula}</button>
-					`
-					telaAulas.innerHTML += strHTML
-				})
-			}
+			// 	if (db.data.aulas.length == 0) {
+			// 		strHTML = `<p><i class="bi bi-exclamation-circle-fill"></i> Você ainda não adicionou aulas para esse curso</p>`
+			// 		telaDescrCurso = strHTML
+			// 	}
+			// 	else {
+			// 		db.data.aulas.forEach((aula, index) => {
+			// 			console.log(aula, index)
+			// 			strHTML = `
+			// 			<button type="button" class="list-group-item list-group-item-action"><input type="checkbox">&ensp;${index + 1}. ${aula}</button>
+			// 			`
+			// 			telaAulas.innerHTML += strHTML
+			// 		})
+			// 	}
 		}
 
 	</script>

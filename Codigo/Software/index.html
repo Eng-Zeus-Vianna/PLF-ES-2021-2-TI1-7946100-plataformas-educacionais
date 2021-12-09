@@ -12,9 +12,6 @@
 
 	<!-- Bootstrap Icon -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-
-	<script src="js/db_fake.js"></script>
-	<script src="js/main.js"></script>
 </head>
 
 <body>
@@ -61,10 +58,9 @@
 	</div>
 
 
-
+	<script src="js/add_curso.js"></script>
 	<script>
 
-		// Insere conteúdo HTML a partir do BD
 		onload = function () {
 
 			let telaCursos = document.getElementById("tela_cursos")
@@ -72,7 +68,7 @@
 			telaCursos.innerHTML = ""
 
 			// Preenhce HTML da div#tela_cursos
-			db.cursos.forEach(curso => {
+			db.data.forEach(curso => {
 
 				strHTML = `
 				<div class="col">
@@ -89,7 +85,7 @@
 					</a>
 				`
 				telaCursos.innerHTML += strHTML
-			});
+			})
 		}
 	</script>
 

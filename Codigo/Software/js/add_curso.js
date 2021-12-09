@@ -20,41 +20,38 @@ var db_cursos_inicial = {
     ]
 }
 
-
-var db = JSON.parse(localStorage.getItem('db_curso'));
+var db = JSON.parse(localStorage.getItem('db_curso'))
 if (!db) {
     db = db_cursos_inicial
-};
+    // db = { "data": [] }
+}
 
 function displayMessage(msg) {
-    $('#msg').html('<div class="alert alert-warning">' + msg + '</div>');
+    $('#msg').html('<div class="alert alert-warning">' + msg + '</div>')
 }
 
 function insertCurso(curso) {
 
-    let novoId = 1;
+    let novoId = 1
     if (db.data.length != 0)
-        novoId = db.data[db.data.length - 1].id + 1;
+        novoId = db.data[db.data.length - 1].id + 1
     let novoCurso = {
         "id": novoId,
         "nome_curso": curso.nome_curso,
         "descricao": curso.descricao,
         "autor": curso.autor,
         "aulas": []
+    }
 
-    };
+    db.data.push(novoCurso)
+    displayMessage("Curso inserido com sucesso")
 
-
-    db.data.push(novoCurso);
-    displayMessage("Curso inserido com sucesso");
-
-
-    localStorage.setItem('db_curso', JSON.stringify(db));
+    localStorage.setItem('db_curso', JSON.stringify(db))
 }
 
 function updateCurso(id, curso) {
 
-    let index = db.data.map(obj => obj.id).indexOf(id);
+    let index = db.data.map(obj => obj.id).indexOf(id)
 
 
     db.data[index].nome_curso = curso.nome_curso,
@@ -62,16 +59,16 @@ function updateCurso(id, curso) {
         db.data[index].autor = curso.autor,
 
 
-        displayMessage("Curso alterado com sucesso");
+        displayMessage("Curso alterado com sucesso")
 
-    localStorage.setItem('db_curso', JSON.stringify(db));
+    localStorage.setItem('db_curso', JSON.stringify(db))
 }
 
 function deleteCurso(id) {
 
-    db.data = db.data.filter(function (element) { return element.id != id });
+    db.data = db.data.filter(function (element) { return element.id != id })
 
-    displayMessage("Curso removido com sucesso");
+    displayMessage("Curso removido com sucesso")
 
-    localStorage.setItem('db_curso', JSON.stringify(db));
+    localStorage.setItem('db_curso', JSON.stringify(db))
 }
