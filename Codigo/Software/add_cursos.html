@@ -56,55 +56,49 @@
 		</div>
 
 		<!-- Campos de Input -->
-		<form id="form-curso">
-			<div class="form-group row">
+		<form class="row g-3 border my-2 px-5 pb-4" id="form-curso">
+			<div class="col d-none">
+				<label for="inputId" class="form-label">ID</label>
+				<input type="text" class="form-control" id="inputId" disabled>
+			</div>
 
-				<div class="col d-none">
-					<label for="inputId">Id</label>
-					<input type="text" class="form-control" id="inputId" placeholder="ID" disabled>
-				</div>
-				<div class="col-md-6 mt-3">
-					<label for="inputNome">Nome do Curso</label>
-					<input type="text" class="form-control" id="inputNome" placeholder="Informe o nome do curso">
-				</div>
-				<div class="col-md-6 mt-3">
-					<label for="inputAutor">Autor</label>
-					<input type="text" class="form-control" id="inputAutor" placeholder="Informe o Autor do curso">
-				</div>
-				<div class="col mt-3">
-					<label for="inputDescricao">Descrição</label>
-					<textarea id="inputDescricao" class="form-control" placeholder="Descrição do curso"></textarea>
-				</div>
+			<div class="col-md-6">
+				<label for="inputNome" class="form-label">Curso</label>
+				<input type="text" class="form-control" id="inputNome" placeholder="Informe o nome do curso">
+			</div>
 
+			<div class="col-md-6">
+				<label for="inputAutor" class="form-label">Autor</label>
+				<input type="text" class="form-control" id="inputAutor" placeholder="Informe o autor do curso">
+			</div>
+
+			<div class="col">
+				<label for="inputDescricao" class="form-label">Descrição</label>
+				<textarea id="inputDescricao" class="form-control" placeholder="Descrição do curso"></textarea>
 			</div>
 
 			<!-- Botões -->
-			<div class="form-group row mt-4">
-				<div class="col-sm-12">
-					<input type="button" class="btn btn-success" id="btnInsert" value="Inserir">
-					<input type="button" class="btn btn-outline-warning" id="btnUpdate" value="Alterar">
-					<input type="button" class="btn btn-outline-danger" id="btnDelete" value="Excluir">
-					<input type="button" class="btn btn-outline-secondary" id="btnClear" value="Limpar Dados">
-				</div>
+			<div class="col-12 f-wrap">
+				<input type="button" class="btn btn-success" id="btnInsert" value="Inserir">
+				<input type="button" class="btn btn-outline-warning" id="btnUpdate" value="Alterar">
+				<input type="button" class="btn btn-outline-danger" id="btnDelete" value="Excluir">
+				<input type="button" class="btn btn-outline-secondary" id="btnClear" value="Limpar Dados">
 			</div>
 		</form>
-		<hr>
 
 		<!-- Tabela -->
-		<div class="row">
-			<div class="col">
-				<table id="grid-cursos" class="table table-hover">
-					<thead>
-						<tr>
-							<th scope="col">ID</th>
-							<th scope="col">Curso</th>
-							<th scope="col">Descrição</th>
-							<th scope="col">Autor</th>
-						</tr>
-					</thead>
-					<tbody id="table-cursos"></tbody>
-				</table>
-			</div>
+		<div class="table-responsive">
+			<table class="table table-hover table-borderless" id="grid-cursos">
+				<thead>
+					<tr>
+						<th scope="col">ID</th>
+						<th scope="col">Curso</th>
+						<th scope="col">Descrição</th>
+						<th scope="col">Autor</th>
+					</tr>
+				</thead>
+				<tbody id="table-cursos"></tbody>
+			</table>
 		</div>
 
 	</div>
@@ -118,11 +112,6 @@
 		onload = function () {
 			// Adiciona funções para tratar os eventos
 			$("#btnInsert").click(function () {
-				// Verfica se o formulário está preenchido corretamente
-				if (!$('#form-curso')[0].checkValidity()) {
-					displayMessage("Preencha o formulário corretamente.");
-					return;
-				}
 
 				// Obtem os valores dos campos do formulário
 				let campoNome = $("#inputNome").val();

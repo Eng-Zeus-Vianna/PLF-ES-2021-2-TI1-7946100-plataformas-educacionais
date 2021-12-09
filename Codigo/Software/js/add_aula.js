@@ -2,16 +2,14 @@ var db_aulas_inicial = {
     "data": [{
         "id": 1,
         "nome_aula": "Aula teste",
-        "categoria": "teste",
+        "link": "https://www.google.com/",
     }]
 }
-
 
 var db = JSON.parse(localStorage.getItem('db_aula'))
 if (!db) {
     db = db_aulas_inicial
 }
-
 
 function displayMessage(msg) {
     $('#msg').html('<div class="alert alert-warning">' + msg + '</div>')
@@ -25,7 +23,7 @@ function insertaula(aula) {
     let novoaula = {
         "id": novoId,
         "nome_aula": aula.nome_aula,
-        "conteudo": aula.conteudo,
+        "link": aula.link,
     }
 
 
@@ -42,7 +40,7 @@ function updateaula(id, aula) {
 
 
     db.data[index].nome_aula = aula.nome_aula,
-        db.data[index].conteudo = aula.conteudo,
+        db.data[index].link = aula.link,
 
         displayMessage("Aula alterado com sucesso")
 

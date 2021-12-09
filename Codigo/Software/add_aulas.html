@@ -56,64 +56,57 @@
 		</div>
 
 		<!-- Campos de Input -->
-		<form id="form-curso">
-			<div class="form-group row">
-				<div class="col">
-					<select class="form-select" aria-label="Default select example">
-						<option selected>Open this select menu</option>
-						<option value="1">One</option>
-						<option value="2">Two</option>
-						<option value="3">Three</option>
-					</select>
-				</div>
-				<div class="col d-none">
-					<label for="inputId">Id</label>
-					<input type="text" class="form-control" id="inputId" placeholder="ID" disabled>
-				</div>
-				<div class="col">
-					<label for="inputNome_aula">Nome da aula</label>
-					<input type="text" class="form-control" id="inputNome_aula" placeholder="Informe o nome da aula">
-				</div>
-				<div class="col">
-					<label for="inputConteudo">Conteudo</label>
-					<input type="text" class="form-control" id="inputConteudo" placeholder="Conteúdo">
-				</div>
+		<form class="row g-3 border my-2 px-5 pb-4" id="form-aula">
+			<div class="col d-none">
+				<label for="inputId" class="form-label">ID</label>
+				<input type="text" class="form-control" id="inputId" disabled>
+			</div>
 
+			<div class="col-md-6">
+				<label for="" class="form-label">Curso</label>
+				<select id="" class="form-select">
+					<option selected>Escolha...</option>
+					<option>...</option>
+				</select>
+			</div>
+
+			<div class="col-md-6">
+				<label for="inputNome_aula" class="form-label">Aula</label>
+				<input type="text" class="form-control" id="inputNome_aula">
+			</div>
+
+			<div class="col">
+				<label for="inputLink" class="form-label">Link</label>
+				<input type="url" class="form-control" id="inputLink">
 			</div>
 
 			<!-- Botões -->
-			<div class="form-group row mt-4">
-				<div class="col-sm-12">
-					<input type="button" class="btn btn-success" id="btnInsert" value="Inserir">
-					<input type="button" class="btn btn-outline-warning" id="btnUpdate" value="Alterar">
-					<input type="button" class="btn btn-outline-danger" id="btnDelete" value="Excluir">
-					<input type="button" class="btn btn-outline-secondary" id="btnClear" value="Limpar Dados">
-				</div>
+			<div class="col-12 f-wrap">
+				<input type="button" class="btn btn-success" id="btnInsert" value="Inserir">
+				<input type="button" class="btn btn-outline-warning" id="btnUpdate" value="Alterar">
+				<input type="button" class="btn btn-outline-danger" id="btnDelete" value="Excluir">
+				<input type="button" class="btn btn-outline-secondary" id="btnClear" value="Limpar Dados">
 			</div>
 		</form>
-		<hr>
 
 		<!-- Tabela -->
-		<div class="row">
-			<div class="col-sm-12">
-				<table id="grid-aulas" class="table table-hover">
-					<thead>
-						<tr>
-							<th scope="col">#</th>
-							<th scope="col">Nome do aula</th>
-							<th scope="col">Conteudo</th>
-						</tr>
-					</thead>
-					<tbody id="table-aulas">
-						<tr>
-							<td scope="row">1</td>
-							<td></td>
-							<td></td>
-							<td></td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
+		<div class="table-responsive mt-3">
+			<table class="table table-hover table-borderless" id="grid-aulas">
+				<thead class="table-light">
+					<tr>
+						<th scope="col">ID</th>
+						<th scope="col">Aula</th>
+						<th scope="col">Link</th>
+					</tr>
+				</thead>
+				<tbody id="table-aulas">
+					<tr>
+						<td scope="row">1</td>
+						<td></td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 
 	</div>
@@ -130,10 +123,10 @@
 
 				// Obtem os valores dos campos do formulário
 				let campoNome_aula = $("#inputNome_aula").val();
-				let campoConteudo = $("#inputConteudo").val();
+				let campoLink = $("#inputLink").val();
 				let aula = {
 					nome_aula: campoNome_aula,
-					conteudo: campoConteudo,
+					link: campoLink,
 				};
 
 				insertaula(aula);
@@ -154,10 +147,10 @@
 					return;
 				}
 				let campoNome_aula = $("#inputNome_aula").val();
-				let campoConteudo = $("#inputConteudo").val();
+				let campoLink = $("#inputLink").val();
 				let aula = {
 					nome_aula: campoNome_aula,
-					conteudo: campoConteudo,
+					link: campoLink,
 				};
 
 				updateaula(parseInt(campoId), aula);
@@ -206,7 +199,7 @@
 
 				$("#inputId").val(colunas[0].innerText);
 				$("#inputNome_aula").val(colunas[1].innerText);
-				$("#inputConteudo").val(colunas[2].innerText);
+				$("#inputLink").val(colunas[2].innerText);
 			});
 
 			exibeaulas();
@@ -225,7 +218,7 @@
 					<tr>
 						<td scope="row">${aula.id}</td>
 						<td>${aula.nome_aula}</td>
-						<td>${aula.conteudo}</td>
+						<td>${aula.link}</td>
 					</tr>
 				`);
 			}

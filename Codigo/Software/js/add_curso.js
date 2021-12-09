@@ -22,6 +22,7 @@ var db_cursos_inicial = {
 }
 
 var db = JSON.parse(localStorage.getItem('db_curso'))
+
 if (!db) {
     db = db_cursos_inicial
     // db = { "data": [] }
