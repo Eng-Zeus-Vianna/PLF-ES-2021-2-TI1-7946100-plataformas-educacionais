@@ -69,24 +69,36 @@
 			telaCursos.innerHTML = ""
 
 			// Preenhce HTML da div#tela_cursos
-			db.data.forEach((curso, index) => {
+			if (db.data.length == 0) {
 
 				strHTML = `
-				<div class="col">
-					<a href="curso.html" class="link-dark text-decoration-none" id="${index}" onclick="escolheCurso()">
-						<div class="card h-100">
-							<div class="card-body">
-								<h5 class="card-title">${curso.nome_curso}</h5>
-								<p class="card-text"><i class="bi bi-bookmark"></i> ${curso.descricao}</p>
-							</div>
-							<div class="card-footer text-muted">
-								<i class="bi bi-person"></i> ${curso.autor} · ${curso.aulas.length} Aulas
-							</div>
-						</div>
-					</a>
+				<a href="add_aulas.html" class="link-dark text-decoration-none">
+					<p class="mt-3"><i class="bi bi-exclamation-circle-fill"></i> Você ainda não adicionou nenhum curso</p>
+				</a>
 				`
-				telaCursos.innerHTML += strHTML
-			})
+				telaCursos.innerHTML = strHTML
+			}
+			else {
+
+				db.data.forEach((curso, index) => {
+
+					strHTML = `
+					<div class="col">
+						<a href="curso.html" class="link-dark text-decoration-none" id="${index}" onclick="escolheCurso(id)">
+							<div class="card h-100">
+								<div class="card-body">
+									<h5 class="card-title">${curso.nome_curso}</h5>
+									<p class="card-text"><i class="bi bi-book"></i> ${curso.descricao}</p>
+								</div>
+								<div class="card-footer text-muted">
+									<i class="bi bi-person"></i> ${curso.autor} · ${curso.aulas.length} Aulas
+								</div>
+							</div>
+						</a>
+					`
+					telaCursos.innerHTML += strHTML
+				})
+			}
 		}
 	</script>
 
