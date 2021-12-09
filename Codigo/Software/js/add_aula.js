@@ -1,9 +1,8 @@
 var db = JSON.parse(localStorage.getItem('db_curso'))
 
-let arrAulas = db.data[db.curso_selecionado].aulas
-console.log(arrAulas) // APENAS TESTE
 
 function insertAula(aula) {
+    let arrAulas = db.data[db.curso_selecionado].aulas
 
     let novoId = 1
     if (arrAulas.length != 0)

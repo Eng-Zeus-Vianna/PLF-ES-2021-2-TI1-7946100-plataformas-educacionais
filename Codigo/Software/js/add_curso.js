@@ -37,8 +37,8 @@ var db_cursos_inicial = {
 var db = JSON.parse(localStorage.getItem('db_curso'))
 
 if (!db) {
-    db = db_cursos_inicial
-    // db = { "curso_atual": null, "curso_selecionado": null, "data": [] }
+    // db = db_cursos_inicial
+    db = { "curso_atual": null, "curso_selecionado": null, "data": [] }
     localStorage.setItem("db_curso", JSON.stringify(db))
 }
 

@@ -91,7 +91,7 @@
 			else {
 				cursoAtual.aulas.forEach((aula, index) => {
 					strHTML = `
-						<button type="button" class="list-group-item list-group-item-action"><input type="checkbox">&ensp;${index + 1}. ${aula}</button>
+						<button type="button" class="list-group-item list-group-item-action"><input type="checkbox">&ensp;${index + 1}. ${aula.nome_aula}</button>
 						`
 					telaAulas.innerHTML += strHTML
 				})
