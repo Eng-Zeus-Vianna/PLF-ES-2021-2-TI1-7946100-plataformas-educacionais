@@ -1,4 +1,5 @@
 var db_cursos_inicial = {
+    "curso_atual": null,
     "data": [{
         "id": 1,
         "nome_curso": "Web Moderno",
@@ -24,6 +25,7 @@ var db = JSON.parse(localStorage.getItem('db_curso'))
 if (!db) {
     db = db_cursos_inicial
     // db = { "data": [] }
+    localStorage.setItem("db_curso", JSON.stringify(db))
 }
 
 function displayMessage(msg) {
@@ -53,11 +55,9 @@ function updateCurso(id, curso) {
 
     let index = db.data.map(obj => obj.id).indexOf(id)
 
-
     db.data[index].nome_curso = curso.nome_curso,
         db.data[index].descricao = curso.descricao,
         db.data[index].autor = curso.autor,
-
 
         displayMessage("Curso alterado com sucesso")
 
