@@ -12,17 +12,18 @@ function selecionarCurso(ind) {
 
 	let tabelaAulas = document.getElementById("table-aulas")
 	let aulas = db.data[db.curso_selecionado].aulas
-
 	tabelaAulas.innerHTML = ""
 
-	aulas.forEach(aula => {
-		tabelaAulas.innerHTML += `
-		<tr>
-		<td scope="row">${aula.id}</td>
-		<td>${aula.nome_aula}</td>
-		<td>${aula.link}</td>
-	</tr>
-		`
-	})
+	if (ind) {
+		aulas.forEach(aula => {
+			tabelaAulas.innerHTML += `
+			<tr>
+			<td scope="row">${aula.id}</td>
+			<td>${aula.nome_aula}</td>
+			<td>${aula.link}</td>
+			</tr>
+			`
+		})
+	}
 
 }
