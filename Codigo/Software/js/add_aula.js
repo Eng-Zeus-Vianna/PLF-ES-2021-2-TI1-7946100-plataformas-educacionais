@@ -1,21 +1,8 @@
-var db_aulas_inicial = {
-    "data": [{
-        "id": 1,
-        "nome_aula": "Aula teste",
-        "link": "https://www.google.com/",
-    }]
-}
+var db = JSON.parse(localStorage.getItem('db_curso'))
 
-var db = JSON.parse(localStorage.getItem('db_aula'))
-if (!db) {
-    db = db_aulas_inicial
-}
+let curso = db.data[db.curso_selecionado]
 
-function displayMessage(msg) {
-    $('#msg').html('<div class="alert alert-warning">' + msg + '</div>')
-}
-
-function insertaula(aula) {
+function insertAula(aula) {
 
     let novoId = 1
     if (db.data.length != 0)
@@ -29,7 +16,6 @@ function insertaula(aula) {
 
     db.data.push(novoaula)
     displayMessage("Aula inserida com sucesso")
-
 
     localStorage.setItem('db_aula', JSON.stringify(db))
 }
@@ -54,4 +40,8 @@ function deleteaula(id) {
     displayMessage("Aula removida com sucesso")
 
     localStorage.setItem('db_aula', JSON.stringify(db))
+}
+
+function displayMessage(msg) {
+    $('#msg').html('<div class="alert alert-warning">' + msg + '</div>')
 }

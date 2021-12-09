@@ -1,14 +1,27 @@
 var db_cursos_inicial = {
     "curso_atual": null,
+    "curso_selecionado": null,
     "data": [{
         "id": 1,
         "nome_curso": "Web Moderno",
         "descricao": "Tudo que vc precisa saber para construir aplicações modernas para Web. Criar aplicações REAIS usando as mais modernas tecnologias do mercado",
         "autor": "Leonardo Mourao",
         "aulas": [
-            "Aula A1",
-            "Aula A2",
-            "Aula A3"
+            {
+                "id": 1,
+                "nome_aula": "Aula 1",
+                "link": "https://www.google.com/"
+            },
+            {
+                "id": 2,
+                "nome_aula": "Aula 2",
+                "link": "https://www.google.com/"
+            },
+            {
+                "id": 3,
+                "nome_aula": "Aula 3",
+                "link": "https://www.google.com/"
+            }
         ]
     },
     {
@@ -25,7 +38,7 @@ var db = JSON.parse(localStorage.getItem('db_curso'))
 
 if (!db) {
     db = db_cursos_inicial
-    // db = { "data": [] }
+    // db = { "curso_atual": null, "curso_selecionado": null, "data": [] }
     localStorage.setItem("db_curso", JSON.stringify(db))
 }
 

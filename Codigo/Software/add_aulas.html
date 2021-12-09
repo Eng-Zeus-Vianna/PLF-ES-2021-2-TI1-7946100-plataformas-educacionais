@@ -12,6 +12,8 @@
 
 	<!-- Bootstrap Icon -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
+	<script src="js/main.js"></script>
 </head>
 
 <body>
@@ -63,21 +65,20 @@
 			</div>
 
 			<div class="col-md-6">
-				<label for="" class="form-label">Curso</label>
-				<select id="" class="form-select">
+				<label for="selecionaCurso" class="form-label">Curso</label>
+				<select id="selecionaCurso" class="form-select" onchange="selecionarCurso(this.value)">
 					<option selected>Escolha...</option>
-					<option>...</option>
 				</select>
 			</div>
 
 			<div class="col-md-6">
 				<label for="inputNome_aula" class="form-label">Aula</label>
-				<input type="text" class="form-control" id="inputNome_aula">
+				<input type="text" class="form-control" id="inputNome_aula" placeholder="Digite o nome da aula">
 			</div>
 
 			<div class="col">
 				<label for="inputLink" class="form-label">Link</label>
-				<input type="url" class="form-control" id="inputLink">
+				<input type="url" class="form-control" id="inputLink" placeholder="Copie e cole o link (URL) da aula">
 			</div>
 
 			<!-- Botões -->
@@ -100,11 +101,11 @@
 					</tr>
 				</thead>
 				<tbody id="table-aulas">
-					<tr>
+					<!-- <tr>
 						<td scope="row">1</td>
 						<td></td>
 						<td></td>
-					</tr>
+					</tr> -->
 				</tbody>
 			</table>
 		</div>
@@ -118,6 +119,18 @@
 	<script>
 
 		onload = function () {
+
+			// Carrega as opções de cursos
+			let selectCursos = document.getElementById("selecionaCurso")
+			let strHTML
+			db.data.forEach((curso, index) => {
+				strHTML = `
+				<option value="${index}">${curso.nome_curso}</option>
+				`
+				selectCursos.innerHTML += strHTML
+			})
+
+
 			// Adiciona funções para tratar os eventos
 			$("#btnInsert").click(function () {
 
@@ -129,7 +142,7 @@
 					link: campoLink,
 				};
 
-				insertaula(aula);
+				insertAula(aula);
 
 				// Reexibe os aulas
 				exibeaulas();
@@ -201,28 +214,27 @@
 				$("#inputNome_aula").val(colunas[1].innerText);
 				$("#inputLink").val(colunas[2].innerText);
 			});
-
 			exibeaulas();
 		}
 
-
 		function exibeaulas() {
-			// Remove todas as linhas do corpo da tabela
 
-			$("#table-aulas").html("");
+			let tabelaAulas = document.getElementById("table-aulas")
+			let aulas = db.data[db.curso_selecionado].aulas
 
-			// Popula a tabela com os registros do banco de dados
-			for (i = 0; i < db.data.length; i++) {
-				let aula = db.data[i];
-				$("#table-aulas").append(`
+			tabelaAulas.innerHTML = ""
+
+			aulas.forEach(aula => {
+				tabelaAulas.innerHTML += `
 					<tr>
 						<td scope="row">${aula.id}</td>
 						<td>${aula.nome_aula}</td>
 						<td>${aula.link}</td>
 					</tr>
-				`);
-			}
+				`
+			})
 		}
+
 	</script>
 
 
