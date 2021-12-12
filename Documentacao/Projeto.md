@@ -16,7 +16,6 @@ Os membros do grupo são:
 - Mariana Dias Caeatano
 - Paulo Roncarati De Souza
 
-> Inclua a lista dos membros da equipe com seus nomes completos.
 
 # Estrutura do Documento
 
