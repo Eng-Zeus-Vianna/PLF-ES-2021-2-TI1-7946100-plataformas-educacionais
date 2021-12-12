@@ -1,11 +1,11 @@
 # Informações do Projeto
-`TÍTULO DO PROJETO`  
+`Plataformas Digitais`  
 
 Trabalho Interdisciplinar - Aplicacões Web
 
-`CURSO`
+`Engenharia de Software Noite`
 
-`SEMESTRE`
+`Primeiro semestre`
 
 ## Participantes
 
