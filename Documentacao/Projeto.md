@@ -10,7 +10,7 @@ Trabalho Interdisciplinar - Aplicacões Web
 ## Participantes
 
 Os membros do grupo são: 
-- Bruno Vierira Cardoso
+- Bruno Vieira Cardoso
 - Isabela Gontijo de Castro
 - Lucas Santos Rosa
 - Mariana Dias Caeatano
