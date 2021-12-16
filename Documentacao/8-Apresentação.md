@@ -3,16 +3,15 @@
 > Conjunto de slides em um arquivo PowerPoint ou PDF
 > com a apresentação do projeto contemplando todos os
 > itens trabalhados nos demais artefatos.
+> 
+![Apresentação](https://github.com/ICEI-PUC-Minas-PPLES-TI/PLF-ES-2021-2-TI1-7946100-plataformas-educacionais/blob/master/Divulgacao/Apresentacao/apresentacao__icourses.pdf)
 
 
 ## Título do Projeto
-> Nome e marca do projeto
+> iCourses Plataforma educacional
 
 ## Identidade Visual (Marca, Design)
-> O grupo deve ter o cuidado em utilizar figuras, imagens, e
-> cores dentro do contexto da solução proposta, de forma a
-> manter a temática do problema.
-
+![LOGO](https://github.com/ICEI-PUC-Minas-PPLES-TI/PLF-ES-2021-2-TI1-7946100-plataformas-educacionais/blob/master/Documentacao/images/imagem_2021-12-15_231644.png)
 
 ## Conjunto de Slides (Estrutura)
 > O grupo deve distribuir de forma coerente o conteúdo a ser
