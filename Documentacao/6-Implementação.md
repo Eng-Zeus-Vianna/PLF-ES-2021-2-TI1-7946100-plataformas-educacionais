@@ -45,8 +45,5 @@ escolher salvar ou deletar o post. Em ambos os casos o status é
 notificado para o usuário (Tela 8) e em seguida ele é redirecionado
 para a Tela 2.
 
-<<<<<<< HEAD
-![Exemplo de UserFlow](images/userflow.jpg)
-=======
+
 ![Exemplo de UserFlow](images/user_flow.png)
->>>>>>> 89c220154bf7ae1dde569582e1e7404f71493445
