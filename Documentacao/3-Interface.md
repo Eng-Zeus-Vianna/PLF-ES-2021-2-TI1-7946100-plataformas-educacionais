@@ -13,10 +13,10 @@ O usuário também pode clicar em 'Adicionar aulas' e gerenciar as aulas de cada
 ## Wireframes
 
 ## Home
-![Home do Site](images/Home.png)
+![Home do Site](images/home_wire.png)
  
 ## Pagina do Curso
-![Pagina Cursos](images/curso_inserido.png)
+![Pagina Cursos](images/add_curso_wire.png)
  
 ## Pagina das aulas
-![Pagina das aulas](images/aula_inserida.png)
+![Pagina das aulas](images/add_aula_wire.png)
