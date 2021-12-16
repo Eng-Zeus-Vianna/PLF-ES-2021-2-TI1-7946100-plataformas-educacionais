@@ -1,20 +1,16 @@
 # Informações do Projeto
-`Plataformas Digitais`
+iCourses - Plataformas Educacionais
 
-Trabalho Interdisciplinar - Aplicacões Web
-
-`Engenharia de Software Noite`
-
-`Primeiro semestre`
+Trabalho Interdisciplinar: Aplicacões Web | Engenharia de Software Noite | PUC Minas
 
 ## Participantes
 
 Os membros do grupo são:
-- Bruno Vieira Cardoso
-- Isabela Gontijo de Castro
-- Lucas Santos Rosa
-- Mariana Dias Caeatano
-- Paulo Roncarati De Souza
+* Bruno Vieira Cardoso
+* Isabela Gontijo de Castro
+* Lucas Santos Rosa
+* Mariana Dias Caeatano
+* Paulo Roncarati De Souza
 
 
 # Estrutura do Documento
