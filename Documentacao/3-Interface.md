@@ -9,7 +9,7 @@
 > Projeto](2-Especificação.md).
 
 ## User Flow
-![Exemplo de UserFlow](images/userFlow.jpg)
+![Exemplo de UserFlow](images/user_flow.png)
 A imagem a seguir ilustra a o fluxo do usuário em nossa solução. Assim
 que o usuário entra na plataforma, ele é apresentado à possibilidade
 pesquisar o conteúdo desejado podendo seguir o caminho de fazer um login
