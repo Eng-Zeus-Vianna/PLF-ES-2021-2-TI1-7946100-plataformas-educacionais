@@ -12,11 +12,15 @@ O usuário também pode clicar em 'Adicionar aulas' e gerenciar as aulas de cada
 
 ## Wireframes
 
-## Home
+### Home
 ![Home do Site](images/home_wire.png)
  
-## Pagina do Curso
+### Pagina do Curso
 ![Pagina Cursos](images/add_curso_wire.png)
  
-## Pagina das aulas
+### Pagina das aulas
 ![Pagina das aulas](images/add_aula_wire.png)
+
+## Protótipo funcional
+
+Link para acessar o protótipo funcional: https://www.figma.com/proto/VtO72OqlLF1KuUJrr3EVBT/Nome-do-site?node-id=525%3A92&scaling=min-zoom&page-id=525%3A2&starting-point-node-id=525%3A57&show-proto-sidebar=1
