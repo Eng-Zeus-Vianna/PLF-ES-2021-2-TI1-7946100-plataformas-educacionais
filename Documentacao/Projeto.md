@@ -22,5 +22,5 @@ Os membros do grupo são:
 5. [Gerenciamento de Projeto](5-Gerenciamento-Projeto.md)
 6. [Implementação](6-Implementação.md)
 7. [Testes e Avaliação](7-Testes.pdf)
-8. [Apresentação](8-Apresentação.md)
+8. [Apresentação](8-Apresentacaoo.pdf)
 8. [Arquitetura](9-Arquitetura.pdf)
