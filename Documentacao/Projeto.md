@@ -1,5 +1,5 @@
 # Informações do Projeto
-`Plataformas Digitais`  
+`Plataformas Digitais`
 
 Trabalho Interdisciplinar - Aplicacões Web
 
@@ -9,7 +9,7 @@ Trabalho Interdisciplinar - Aplicacões Web
 
 ## Participantes
 
-Os membros do grupo são: 
+Os membros do grupo são:
 - Bruno Vieira Cardoso
 - Isabela Gontijo de Castro
 - Lucas Santos Rosa
@@ -26,5 +26,4 @@ Os membros do grupo são:
 5. [Gerenciamento de Projeto](5-Gerenciamento-Projeto.md)
 6. [Implementação](6-Implementação.md)
 7. [Testes e Avaliação](7-Testes.md)
-8. [Referências](8-Referências.md)
-9. [Apresentação](9-Apresentação.md)
+8. [Apresentação](8-Apresentação.md)

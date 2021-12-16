@@ -2,21 +2,17 @@
 
 Nessa seção, será apresentada uma visão um pouco mais aprofundada do projeto, através da elaboração das Personas, Histórias de Usuários, Requisitos e Restrições do projeto.
 
-## Personas
+## Persona
 
 Enzo tem 19 anos, é estudante de Graduação e ainda não trabalha. Possui dificuldade para focar nos estudos e pensa sobre como encontrar conteúdos de qualidade e gratuitos na internet de forma simples e eficiente, a fim de de se qualificar e ingressar no mercado de trabalho.
-
-Margareth tem 45 anos, é professora pós-graduada e trabalha em uma escola pública. Tem um bom domínio da área pedagógica, mas tem dificuldade em transimtir os conhecimentos necessários para seus alunos através da internet. Está procurando formas de manter seus alunos motivados.
 
 ## Histórias de Usuários
 
 |EU COMO... | QUERO/PRECISO ... |PARA ... |
 |--------------------|------------------------------------|----------------------------------------|
-|Aluno da plataforma | Encontrar cursos filtrados e acompanhar meu progresso | Aprender de forma mais eficiente |
-|Aluno da plataforma | Acompanhar o progresso nos cursos que está fazendo | Não perder o controle do que está sendo feito |
-|Aluno da plataforma | Visualizar as tarefas relacionadas aos seus cursos | Aprender de forma mais eficiente |
-|Professor da plataforma | Distribuir meus materiais didáticos | Alcanças alunos em todo o Brasil |
-|Professor da plataforma | Fazer reviews embasadas dos materias didáticos do curso | Fazer com que o aluno encontre os cursos de forma mais agilizada |
+| Aluno da plataforma | Gostaria de focar mais nos estudos | Ter notas melhores na faculdade |
+| Aluno da plataforma | Preciso aprender de forma mais dinâmica | Concorrer a boas oportunidades de estágio |
+| Aluno da plataforma | Visualizar cursos que estou fazendo de várias plataformas no mesmo lugar | Para perder menos tempo tentando lembrar o que preciso fazer |
 
 ## Requisitos
 
@@ -26,11 +22,10 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário localize cursos de forma rápida e filtrada | ALTA |
-|RF-002| Permitir que o usuário envie feedback sobre os cursos | MÉDIA |
-|RF-003| Permitir que o usuário interaja com a comunidade através de fóruns | MÉDIA |
-|RF-004| Permitir que o usuário visualize seu desempenho e progresso | BAIXA |
-|RF-005| Permitir que o usuário visualize em um Dashboard as suas atividades em curso | BAIXA |
+|RF-001| Permitir que o usuário visualize seus cursos de forma rápida | ALTA |
+|RF-002| Permitir que o usuário adicione, altere ou exclua seus cursos | ALTA |
+|RF-003| Permitir que o usuário adicione, altere ou exclua aulas para cada curso | MÉDIA |
+|RF-004| Permitir que o usuário marque as aulas que já foram concluídas | MÉDIA |
 
 ### Requisitos não Funcionais
 

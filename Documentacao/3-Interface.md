@@ -1,64 +1,31 @@
-
 # Projeto de Interface
-
-<span style="color:red">Pré-requisitos: <a href="2-Especificação.md"> Documentação de Especificação</a></span>
-
-> Apresente as principais a interface da plataforma. Discuta como ela
-> foi elaborada de forma a atender os requisitos funcionais, não
-> funcionais e histórias de usuário abordados nas [Especificações do
-> Projeto](2-Especificação.md).
 
 ## User Flow
 ![Exemplo de UserFlow](images/userFlow.jpg)
-A imagem a seguir ilustra a o fluxo do usuário em nossa solução. Assim
-que o usuário entra na plataforma, ele é apresentado à possibilidade
-pesquisar o conteúdo desejado podendo seguir o caminho de fazer um login
-ou se cadastrar caso já não tenha uma cadastro. Caso faça o login o usuário
-pode então visualizar seu histórico e recomendações baseadas neste, bem
-como sugestões baseadas nas recomendações das conexões que pode cadastrar.
+A imagem a seguir ilustra a o fluxo do usuário em nossa solução. Assim que o usuário entra na plataforma, são mostrados todos os seus cursos cadastrados no formato de cards. Ao clicar no card, o usuário é levado à página do curso.
 
-Alternativamente, o usuário pode usar a ferramenta de busca, que pode
-sugerir resultados baseados em seu histórico se disponível.
+No menu superior, o usuário pode clicar em 'Adicionar curso' para gerenciar seus cursos. Nessa tela, é possível adicionar, alterar ou excluir cursos.
 
-As opções convergem no acesso às informações sobre o curso, a partir das
-quais o usuário pode fazer a inscrição para o curso ou voltar a procurar.
-
-Selecionado um curso, o usuário pode cadastrá-o entre seus cursos em andamento,
-ao que ele passará a constar em seu histórico para recomendações.
-Passa também a ter a possibilidade de tirar dúvidas na comunidade, bem como
-acompanhar desempenho e progresso. Feito o curso, há a possibilidade
-de deixar feedback a seu respeito, que fica no histórico e também retorna
-para recomendações gerais do curso na plataforma, bem como para suas conexões.
-
-
-> **Links Úteis**:
-> - [User Flow: O Quê É e Como Fazer?](https://medium.com/7bits/fluxo-de-usu%C3%A1rio-user-flow-o-que-%C3%A9-como-fazer-79d965872534)
-> - [User Flow vs Site Maps](http://designr.com.br/sitemap-e-user-flow-quais-as-diferencas-e-quando-usar-cada-um/)
-
+O usuário também pode clicar em 'Adicionar aulas' e gerenciar as aulas de cada curso. Nessa tela, o usuário deve selecionar o curso, e também é possível adicionar, alterar ou excluir aulas.
 
 ## Wireframes
 #Home Do Site
-> ![Home do Site](images/dashboardHome.jpg)
-> 
-#Pagina de Pesquisa
-> ![Pesquisa](images/pesquisaPesquisas.jpg)
-> 
-#Pagina do Curso
-> ![Pagina Cursos](images/cursoPaginaCurso.jpg)
-> 
-#Pagina Comunidade
-> ![Comunidades](images/comunidadeComunidades.jpg)
-> 
-#Pagina Feedback
-> ![Pagina Feedback](images/feedbackPaginaFeedback.jpg)
-> 
-> #Feedback Respondido
-> ![Feedback Respondido](images/feedback_2FeedbackRespondido.jpg)
-> 
->Feedback Enviado 
-> ![Feedback Enviado](images/feedback_3FeedbackEnviado.jpg)
-
-> 
+![Home do Site](images/dashboardHome.jpg)
 >
-> 
-> 
+#Pagina de Pesquisa
+![Pesquisa](images/pesquisaPesquisas.jpg)
+>
+#Pagina do Curso
+![Pagina Cursos](images/cursoPaginaCurso.jpg)
+>
+#Pagina Comunidade
+![Comunidades](images/comunidadeComunidades.jpg)
+>
+#Pagina Feedback
+![Pagina Feedback](images/feedbackPaginaFeedback.jpg)
+>
+#Feedback Respondido
+![Feedback Respondido](images/feedback_2FeedbackRespondido.jpg)
+>
+>Feedback Enviado
+![Feedback Enviado](images/feedback_3FeedbackEnviado.jpg)

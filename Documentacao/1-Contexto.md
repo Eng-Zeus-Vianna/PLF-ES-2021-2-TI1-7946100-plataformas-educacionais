@@ -11,18 +11,16 @@ Percebemos que, nos dias de hoje, existem certos problemas envolvendo o aprendiz
 
 ## Objetivos
 
-O objetivo geral do grupo é desenvolver uma plataforma educacional web para ajudar estudantes a encontrarem conteúdos gratuitos bem estruturados e de boa qualidade, para que eles possam manter o foco, aprender de uma forma eficaz e atingir os resultados que desejam.
+O objetivo geral do grupo é desenvolver uma plataforma educacional web para ajudar estudantes no geral a gerenciar todos os cursos e aulas que estão realizando no momento de uma forma visual, para que eles possam manter o foco, aprender de forma eficaz e atingir os resultados que desejam.
 
 ### Objetivos específicos
-* Fornecer a pessoas interessadas em aprender determinado assunto uma ferramenta de busca simples e direta ao ponto, que reúna os melhores cursos gratuitos disponíveis na internet
-* Possiblitar que ocorram discussões na comunidade sobre dúvidas e questôes gerais relacionadas aos cursos
-* Apresentar de forma recorrente o progresso da pessoa ao estudar, para que ela não se desmotive ou perca o foco
-* Possibilitar o feedback de determinados artigos, cursos e vídeos para que se direcione outras pessoas
+* Fornecer a pessoas interessadas em aprender determinado assunto uma ferramenta simples e direta ao ponto, que reúna os cursos que o usuário está fazendo
+* Apresentar de forma simples as aulas concluídas e a serem feitas, para que o usuário não se desmotive ou perca o foco
 
 ## Justificativa
-Segundo o Pisa 2018, o Brasil está estagnado desde 2009 com pelo menos 50% dos alunos sem o nível básico em matemática, ciências e leitura. Além disso, segundo o IBGE, a taxa desemprego no Brasil tem crescido desde 2012, e quase dobrou nesse período. Sendo assim, é imprescindível que estudantes aprendam a estudar por conta própria tanto para superarem a defasagem do debilitado sistema de ensino brasileiro, quanto para conseguirem ingressar no mercado de trabalho. 
+Segundo o Pisa 2018, o Brasil está estagnado desde 2009 com pelo menos 50% dos alunos sem o nível básico em matemática, ciências e leitura. Além disso, segundo o IBGE, a taxa desemprego no Brasil tem crescido desde 2012, e quase dobrou nesse período. Sendo assim, é imprescindível que estudantes aprendam a estudar por conta própria tanto para superarem a defasagem do debilitado sistema de ensino brasileiro, quanto para conseguirem ingressar no mercado de trabalho.
 
 ## Público-alvo
-Com esse projeto, esperamos alcançar tanto educadores quanto estudantes.
+Com esse projeto, esperamos alcançar estudantes de qualquer natureza.
 
 No entanto, o nosso foco maior é no estudante, que está cursando o ensino médio ou superior, entre 18 e 31 anos e que ainda não está inserido no mercado de trabalho.

@@ -1,33 +1,32 @@
 # Gerenciamento de Projeto
 
-> Atualmente a equipe está utilizando a metodologia Scrum, pois torna o projeto
-> mais claro e dinâmico e mantém registros de todas as etapas em processamento.
-> Dessa forma, os integrantes dos grupos sabem o que precisa ser feito, o que está sendo feito, os projetos em teste
-> e a finalização do trabalho.
+A equipe utilizou a metodologia Scrum, pois torna o projeto mais claro e dinâmico e mantém registros de todas as etapas. Dessa forma, os integrantes dos grupos sabem o que precisa ser feito, o que está sendo feito, os artefatos em teste e o que já foi concluído.
 
 ## Divisão de Papéis
 
->Scrum Master: Paulo Roncarati De Souza
+Scrum Master: Paulo Roncarati De Souza
 
->Product Owner: Isabela Gontijo de Castro
+Product Owner: Professores
 
-> Equipe de Desenvolvimento:
+Equipe de Desenvolvimento:
 
 * Lucas Santos Rosa
- 
+
 * Mariana Dias Caetano
 
 * Bruno Vieira Cardoso
 
+* Isabela Gontijo de Castro
+
 ## Processo
 
-> 
-Para organização e distribuição das tarefas do projeto, os integrantes do grupo estam utilizando o **kanban** do **GitHub**: 
+Para organização e distribuição das tarefas do projeto, a equipe está utilizando o **kanban** do **GitHub**:
 
--Objetivos: a medida que criamos os cartões das tarefas, indicamos nas colunas as devidas funçoes de cada componente do grupo e verificamos se a pessoa está fazendo, se está em teste ainda ou precisa ser revisado.
+-Objetivos: a medida que criamos os cartões das tarefas, indicamos nas colunas as devidas funções de cada componente do grupo e verificamos se está sendo feito, se está em teste ainda ou precisa ser revisado.
 
 
--To Do: essa coluna se remete a uma Sprint que inda precisamos fazer.
+-To Do: essa coluna se remete a uma Sprint que ainda precisamos fazer.
+
 
 -In progress: se essa terefa ela foi iniciado por um dos integrantes, ele arrasta o card para essa coluna.
 
@@ -43,7 +42,7 @@ As ferramentas empregadas no projeto são:
 
 - Editor de código: VS Code
 - Servidor de repositório: GitHub
-- Ferramentas de comunicação: Microsoft Teams, Google Meet, WhatsApp
-- Ferramentas de diagramação: Figma , Miro
+- Ferramentas de comunicação: WhatsApp, Microsoft Teams, Google Meet
+- Ferramentas de diagramação: Figma, Miro
 
-O editor de texto escolhido pela a equipe é de dinâmica funcionalidade e todos já possuem experiência com essa ferramenta. Os meios de comunicação também estão sendoo precisos, pois é de fácil acesso e todos podem entrar nessas plataformas utilizando um email ou número de telefone. Já a ferramenta Figma, foi indicado pelo os professores para ser feito os projetos de interface e, dessa forma, ajudou com a construção de que temos hoje desses projetos do fluxo das telas. 
+O editor de texto escolhido pela a equipe é de dinâmica funcionalidade e todos já possuem experiência com essa ferramenta. Os meios de comunicação também estão sendo precisos, pois é de fácil acesso e todos podem entrar nessas plataformas utilizando um email ou número de telefone. Já a ferramenta Figma, foi indicado pelo os professores para ser feito os projetos de interface e, dessa forma, ajudou com a construção de que temos hoje desses projetos do fluxo das telas.
