@@ -34,7 +34,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 | RNF-001 | O usuário deve utilizar a plataforma sem nenhum treinamento | ALTA |
 | RNF-002 | O site deverá te uma interface pensada para que a navegação seja fluida e eficiente | ALTA |
 | RNF-003 | O site deverá ser executado tanto em desktops quanto em dispositivos móveis | BAIXA |
-| RNF-004 | sistema deverá atender às normas legais de direitos autorais | MÉDIA |
+| RNF-004 | O sistema deverá atender às normas legais de direitos autorais | MÉDIA |
 
 ## Restrições
 
