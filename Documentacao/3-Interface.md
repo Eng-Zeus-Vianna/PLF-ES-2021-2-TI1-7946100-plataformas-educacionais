@@ -43,7 +43,7 @@ para recomendações gerais do curso na plataforma, bem como para suas conexões
 #Pagina do Curso
 > ![Pagina Cursos](images/curso_inserido.png)
 > 
-> #Pagina de Pesquisa
+> #Pagina das aulas
 > ![Pagina das aulas](images/aula_inserida.png)
 > 
 >
