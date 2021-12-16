@@ -22,4 +22,4 @@ para recomendações gerais do curso na plataforma, bem como para suas conexões
 
 
 
-![Exemplo de UserFlow](images/userFlow.jpg)
+![Exemplo de UserFlow](images/user_flow.png)
