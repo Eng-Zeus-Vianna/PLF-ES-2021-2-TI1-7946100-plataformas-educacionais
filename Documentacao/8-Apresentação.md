@@ -3,7 +3,7 @@
 > Conjunto de slides em um arquivo PowerPoint ou PDF
 > com a apresentação do projeto contemplando todos os
 > itens trabalhados nos demais artefatos.
-[Apresentacao_plataformas_educacionais.pptx](https://github.com/ICEI-PUC-Minas-PPLES-TI/PLF-ES-2021-2-TI1-7946100-plataformas-educacionais/files/7724047/Apresentacao_plataformas_educacionais.pptx)
+
 
 ## Título do Projeto
 > Nome e marca do projeto
