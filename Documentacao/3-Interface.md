@@ -38,26 +38,13 @@ para recomendações gerais do curso na plataforma, bem como para suas conexões
 
 ## Wireframes
 #Home Do Site
-> ![Home do Site](images/dashboardHome.jpg)
-> 
-#Pagina de Pesquisa
-> ![Pesquisa](images/pesquisaPesquisas.jpg)
-> 
+> ![Home do Site](images/Home.png)
+>
 #Pagina do Curso
-> ![Pagina Cursos](images/cursoPaginaCurso.jpg)
+> ![Pagina Cursos](images/curso_inserido.png)
 > 
-#Pagina Comunidade
-> ![Comunidades](images/comunidadeComunidades.jpg)
-> 
-#Pagina Feedback
-> ![Pagina Feedback](images/feedbackPaginaFeedback.jpg)
-> 
-> #Feedback Respondido
-> ![Feedback Respondido](images/feedback_2FeedbackRespondido.jpg)
-> 
->Feedback Enviado 
-> ![Feedback Enviado](images/feedback_3FeedbackEnviado.jpg)
-
+> #Pagina de Pesquisa
+> ![Pagina das aulas](images/aula_inserida.png)
 > 
 >
 > 
