@@ -1,1 +1,0 @@
-[Plano e registro de Testes de Usabilidade.pdf](https://github.com/ICEI-PUC-Minas-PPLES-TI/PLF-ES-2021-2-TI1-7946100-plataformas-educacionais/files/7724133/Plano.e.registro.de.Testes.de.Usabilidade.pdf)

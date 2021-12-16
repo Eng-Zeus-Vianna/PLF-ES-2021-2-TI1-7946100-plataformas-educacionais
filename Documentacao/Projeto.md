@@ -21,5 +21,6 @@ Os membros do grupo são:
 4. [Gestão de Configuração](4-Gestão-Configuração.md)
 5. [Gerenciamento de Projeto](5-Gerenciamento-Projeto.md)
 6. [Implementação](6-Implementação.md)
-7. [Testes e Avaliação](7-Testes.md)
+7. [Testes e Avaliação](7-Testes.pdf)
 8. [Apresentação](8-Apresentação.md)
+8. [Arquitetura](9-Arquitetura.pdf)
